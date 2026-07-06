@@ -1,10 +1,17 @@
+
+
+
+
 const Login = () => {
+
+  
+
     return (
         <div className="login-container" >
             <h1>Login</h1>
-            <form>
+            <form action="submit" method="POST">
 
-                <label for="username">Username:</label>
+                <label HTMLfor="username">Username:</label>
                 <input type="text" id="username" name="username" placeholder="Enter your username." required />
 
                 <label for="password">Password:</label>
