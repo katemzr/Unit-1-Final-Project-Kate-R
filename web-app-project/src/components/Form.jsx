@@ -11,6 +11,7 @@ const Form = () => {
     const [startDate, setStartDate] = useState("");
     const [completionDate, setCompletionDate] = useState("");
     const [notes, setNotes] = useState("");
+    const [location, setLocation] = useState("");
     const [isOnLoan, setIsOnLoan] = useState(false);
 
     const handleSubmit = (e) => {
@@ -32,6 +33,7 @@ const Form = () => {
         setStartDate("");
         setCompletionDate("");
         setNotes("");
+        setLocation("");
         setIsOnLoan(false);
     };
 
@@ -99,7 +101,19 @@ const Form = () => {
                             setDimensions(e.target.value)
                         }
                         placeholder="Enter Puzzle Dimensions"
-                    />  
+                    /> 
+
+                    <label htmlFor="location">Location:</label>
+                    <input 
+                        type="text" 
+                        name="location" 
+                        id="location" 
+                        value={location}
+                        onChange={ (e) =>
+                            setLocation(e.target.value)
+                        }
+                        placeholder="Enter Puzzle's Storage Location'"
+                    />   
 
                     <label htmlFor="purchasedate">Purchase Date:</label>
                     <input 
