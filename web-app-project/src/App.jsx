@@ -2,6 +2,8 @@ import Header from "./components/Header"
 import Footer from "./components/Footer"
 import Login from "./components/Login"
 import { useState } from "react";
+import Form from "./components/Form";
+
 
 function App() {
     const [ isLoggedIn, setIsLoggedIn ] = useState(false);  
@@ -21,6 +23,7 @@ function App() {
       </div>
 
       <Login />
+      <Form />
       <Footer />
      
     </>
