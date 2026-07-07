@@ -1,15 +1,15 @@
 
 
-
-
 const Login = () => {
-
+    const handleSubmit = async (event) => {
+        event.preventDefault();
+    }
   
 
     return (
         <div className="login-container" >
             <h1>Login</h1>
-            <form action="submit" method="POST">
+            <form action="submit" method="GET">
 
                 <label HTMLfor="username">Username:</label>
                 <input type="text" id="username" name="username" placeholder="Enter your username." required />
