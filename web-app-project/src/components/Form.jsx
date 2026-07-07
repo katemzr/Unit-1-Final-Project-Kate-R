@@ -11,10 +11,15 @@ const Form = () => {
     const [startDate, setStartDate] = useState("");
     const [completionDate, setCompletionDate] = useState("");
     const [notes, setNotes] = useState("");
+    const [isOnLoan, setIsOnLoan] = useState(false);
 
     const handleSubmit = (e) => {
         e.preventDefault();
     };
+
+    const handleCheckboxChange = (e) => {
+        setIsOnLoan(event.target.checked)
+    }
 
     const handleReset = () => {
         setPuzzleTitle("");
@@ -27,6 +32,7 @@ const Form = () => {
         setStartDate("");
         setCompletionDate("");
         setNotes("");
+        setIsOnLoan(false);
     };
 
     return (
@@ -34,7 +40,7 @@ const Form = () => {
             <h1>Add a New Puzzle</h1>
             <fieldset>
                 <form action="#" method="GET">
-                    <label htmlFor="puzzletitle">Puzzle Title:</label>
+                    <label htmlFor="puzzletitle">*Puzzle Title:</label>
                     <input 
                         type="text" 
                         name="puzzletitle" 
@@ -142,6 +148,15 @@ const Form = () => {
                         }
                         placeholder="Enter Puzzle Completion Date"
                     /> 
+                    
+                    <label htmlFor="onloan">On Loan?:</label>
+                    <input 
+                        type="checkbox"
+                        name="onloan"
+                        id="onloan"
+                        checked={isOnLoan}
+                        onChange={handleCheckboxChange}                       
+                    />
 
                     <label htmlFor="notes">Notes:</label>
                     <textarea
