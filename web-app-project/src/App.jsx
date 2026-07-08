@@ -4,6 +4,7 @@ import Footer from "./components/Footer"
 import Login from "./components/Login"
 import { useState } from "react";
 import Form from "./components/Form";
+import Button from "./components/Button";
 
 
 function App() {
@@ -25,7 +26,7 @@ function App() {
 
       <Login />
       <Form />
-      
+      <Button />
       <Footer />
      
     </>
