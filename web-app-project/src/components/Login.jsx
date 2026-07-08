@@ -11,10 +11,10 @@ const Login = () => {
             <h1>Login</h1>
             <form action="submit" method="GET">
 
-                <label HTMLfor="username">Username:</label>
+                <label htmlFor="username">Username:</label>
                 <input type="text" id="username" name="username" placeholder="Enter your username." required />
 
-                <label for="password">Password:</label>
+                <label htmlFor="password">Password:</label>
                 <input type="password" id="password" name="password" placeholder="Enter your password." required />
                 
 
