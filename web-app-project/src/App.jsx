@@ -1,3 +1,4 @@
+import { BrowserRouter as Router, Routes, Route } from "react-router";
 import Header from "./components/Header"
 import Footer from "./components/Footer"
 import Login from "./components/Login"
@@ -24,6 +25,7 @@ function App() {
 
       <Login />
       <Form />
+      
       <Footer />
      
     </>
