@@ -1,35 +1,38 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router";
-import Header from "./components/Header"
-import Footer from "./components/Footer"
-import Login from "./components/Login"
+import { BrowserRouter, Routes, Route } from "react-router";
+import HomePage from "./components/pages/HomePage";
+import AboutPage from "./components/pages/AboutPage";
+import MyPuzzlesPage from "./components/pages/MyPuzzlesPage";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import Login from "./components/Login";
 import { useState } from "react";
 import Form from "./components/Form";
 import Button from "./components/Button";
+
 
 
 function App() {
     const [ isLoggedIn, setIsLoggedIn ] = useState(false);  
 
   return (
-    <>
+    
+    <div id='body-container'>
       <Header />
 
-       <div>       
-        <h1>Welcome to The Last Piece!</h1>  
-        <p>
-          Whether you're a casual puzzler or a dedicated enthusiast, this is your home for everything puzzle-related.
-          Organize your personal jigsaw puzzle collection, keep track of the puzzles you own, and build a complete record of every puzzle you've completed. Log your finish times, 
-          revisit your personal bests, and watch your puzzle-solving journey grow with every completed challenge.
-          From your first 100-piece puzzle to your most ambitious masterpiece, your collection and accomplishments are all in one place. Happy puzzling!  
-        </p>
-      </div>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/mypuzzles" element={<MyPuzzlesPage />} />          
+        </Routes>
+      </BrowserRouter>
 
       <Login />
       <Form />
       <Button />
       <Footer />
-     
-    </>
+    </div>
+    
   );
 }
 
