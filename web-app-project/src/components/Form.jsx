@@ -194,7 +194,7 @@ const Form = () => {
                     <button
                         type="submit"
                         value="submit"
-                        onClick={ (e) => handleSubmit(e)}
+                        onSubmit={ (e) => handleSubmit(e)}
                         >Submit
                     </button>
 
