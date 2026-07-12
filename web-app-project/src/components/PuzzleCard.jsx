@@ -2,10 +2,16 @@ import { useState } from "react";
 import DeletePuzzle from "./DeletePuzzle";
 
 const PuzzleCard = ({ id, title, link, alt }) => {
-const [ isVisible, setIsVisible ] = useState(true);
-if (!isVisible){ 
-    return null;
-}
+    
+    const [ isVisible, setIsVisible ] = useState(true);
+    
+    const handleDelete = () => {
+        setIsVisible(false);
+    }
+    
+    if (!isVisible){ 
+        return null;
+    }
     
 
     return (
@@ -16,11 +22,9 @@ if (!isVisible){
             <div>
                 <p>{title}</p>
             </div>
-            <DeletePuzzle />
-
-
-            
-            <br></br>
+            <div>
+                <DeletePuzzle onDelete={handleDelete} />
+            </div>
         </div>
     );
 }

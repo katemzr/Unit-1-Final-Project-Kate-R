@@ -4,7 +4,7 @@ import { useState } from "react";
 
 const puzzles = [
     {
-        id: 1, 
+        id: "1", 
         title: "My Cup Runneth Over",
         link: '/images/puzzle1.jpg',
         alt: "image of My Cup Runneth Over puzzle"

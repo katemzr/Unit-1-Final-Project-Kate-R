@@ -2,15 +2,13 @@ import { useState } from "react";
 
 
 
-const DeletePuzzle = () => {
-    const [ isVisible, setIsVisible ] = useState(true);
-        if (!isVisible){ 
-            return null;
-}
+const DeletePuzzle = ({ onDelete }) => {
+   
+
+
     return (
-        <div>
-            <button onClick={() => setIsVisible(false)}>Delete</button>
-        </div>
+        <button onClick={onDelete}>Delete</button>
+        
     );
 }
 
