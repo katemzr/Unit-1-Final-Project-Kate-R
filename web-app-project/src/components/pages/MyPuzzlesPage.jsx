@@ -1,5 +1,6 @@
 import Form from "../Form";
 import PuzzleCard from "../PuzzleCard";
+import { useState } from "react";
 
 const puzzles = [
     {
@@ -41,14 +42,21 @@ const puzzles = [
 
 const puzzleItems = puzzles.map(puzzle => <PuzzleCard key={puzzle.id} title={puzzle.title} link={puzzle.link} alt={puzzle.alt}/> );
 
+
+
+
 const MyPuzzlesPage = () => {
+  
+    
+
     return (
         <main>
             <div className="main-content">
                 <h1>My Puzzles Page</h1>
-                 {puzzleItems}   
-           
-
+                {puzzleItems}                
+                
+              
+        
                 <Form />
             </div>
         </main>
@@ -59,3 +67,4 @@ const MyPuzzlesPage = () => {
 
 
 export default MyPuzzlesPage;
+
