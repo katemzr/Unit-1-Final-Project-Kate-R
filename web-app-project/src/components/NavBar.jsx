@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route, NavLink } from "react-router";
 
-function Navbar() {
+function NavBar() {
   return (
     <nav>
       <NavLink to="/" style={({ isActive }) => ({
@@ -36,4 +36,4 @@ function Navbar() {
   );
 }
 
-export default Navbar;
+export default NavBar;

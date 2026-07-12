@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { BrowserRouter, Routes, Route, NavLink } from "react-router";
+import { BrowserRouter, Routes, Route, NavLink, Navigate, useNavigate } from "react-router";
 import Header from "./components/Header";
 import HomePage from "./components/pages/HomePage";
 import AboutPage from "./components/pages/AboutPage";
@@ -7,8 +7,8 @@ import MyPuzzlesPage from "./components/pages/MyPuzzlesPage";
 import Button from "./components/Button";
 import Footer from "./components/Footer";
 import LoginForm from "./components/LoginForm";
-import Navbar from "./components/NavBar";
-
+import NavBar from "./components/NavBar";
+import PuzzleCard from "./components/PuzzleCard";
 
 
 function App() {
@@ -27,48 +27,46 @@ function App() {
  };
 
  const handleLogout = () => {
+
   setUser(null);
  };
     
 
   return (
+    <BrowserRouter>
     <div id='body-container'>
+      <Header />
+
       {user ? (
+
         <div>
-          <Header />
-          <BrowserRouter>
-          <Navbar />
+          <NavBar />
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/about" element={<AboutPage />} />
             <Route path="/mypuzzles" element={<MyPuzzlesPage />} />          
           </Routes>
-          
-          </BrowserRouter>
-          <h1>Welcome back, {user.name}! 🎉</h1>
-          <p>Role: {user.role}</p>
-          <button onClick={handleLogout}>Log Out</button>
-          <Button label="I'm a reusable button!"/>
-          <Footer />
+          <div>          
+            <button onClick={handleLogout}>Log Out</button>
+            <Button label="I'm a reusable button!"/>
+          </div>
         </div>
+
         ) : (
+
         <div>
-          <Header />
-          <BrowserRouter>
-          <Navbar />
           <Routes>
+             <Route path="/" element={<LoginForm onLogin={handleLogin} />} />
             <Route path="/" element={<HomePage />} />
             <Route path="/about" element={<AboutPage />} />          
           </Routes>
-          
-          </BrowserRouter>
-          <LoginForm onLogin={handleLogin} />
-          
-          <Footer />
         </div>
+
         )
       }
+      <Footer />
     </div>
+    </BrowserRouter>
   );
 }
 
