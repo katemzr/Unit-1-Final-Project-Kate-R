@@ -1,39 +1,94 @@
-import { BrowserRouter, Routes, Route } from "react-router";
+import { useState } from "react";
+import { BrowserRouter, Routes, Route, NavLink, Navigate, useNavigate } from "react-router";
+import Header from "./components/Header";
 import HomePage from "./components/pages/HomePage";
 import AboutPage from "./components/pages/AboutPage";
 import MyPuzzlesPage from "./components/pages/MyPuzzlesPage";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
-import Login from "./components/Login";
-import { useState } from "react";
-import Form from "./components/Form";
 import Button from "./components/Button";
-
+import Footer from "./components/Footer";
+import LoginForm from "./components/LoginForm";
+import NavBar from "./components/NavBar";
+import PuzzleCard from "./components/PuzzleCard";
 
 
 function App() {
-    const [ isLoggedIn, setIsLoggedIn ] = useState(false);  
+ const [ user, setUser ] = useState(null);
+ const handleLogin = (credentials) => {
+    if (credentials.username === "admin" && credentials.password === "1234") {
+      setUser({ name: "Admin", role: "administrator" });
+    } else { 
+      if (credentials.username === "puzzler" && credentials.password === "1234") {
+      setUser({ name: "Puzzler", role: "user" });
+    } else {
+      alert ("Invalid Credentials");
+    }
+
+    }
+ };
+
+ const handleLogout = () => {
+
+  setUser(null);
+ };
+    
 
   return (
-    
+    <BrowserRouter>
     <div id='body-container'>
       <Header />
 
+      {user ? (
+
+        <div>
+          <NavBar />
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/about" element={<AboutPage />} />
+            <Route path="/mypuzzles" element={<MyPuzzlesPage />} />          
+          </Routes>
+          <div>          
+            <button onClick={handleLogout}>Log Out</button>
+            <Button label="I'm a reusable button!"/>
+          </div>
+        </div>
+
+        ) : (
+
+        <div>
+          <Routes>
+             <Route path="/" element={<LoginForm onLogin={handleLogin} />} />
+            <Route path="/" element={<HomePage />} />
+            <Route path="/about" element={<AboutPage />} />          
+          </Routes>
+        </div>
+
+        )
+      }
+      <Footer />
+    </div>
+    </BrowserRouter>
+  );
+}
+
+export default App;
+
+
+/*
+<Header />
       <BrowserRouter>
+       <Navbar />
         <Routes>
+
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/mypuzzles" element={<MyPuzzlesPage />} />          
         </Routes>
+        
       </BrowserRouter>
-
-      <Login />
-      <Form />
-      <Button />
+      <Button label="I'm a reusable button!"/>
       <Footer />
-    </div>
-    
-  );
-}
 
-export default App
+          
+*/
+
+
