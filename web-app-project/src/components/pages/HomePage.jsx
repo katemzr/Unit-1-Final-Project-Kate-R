@@ -1,7 +1,7 @@
-import Login from "../Login";
+import Login from "../LoginForm";
 
 
-const HomePage = () => {
+const HomePage= () => {
     return (
         <div>       
             <h1>Welcome to The Last Piece!</h1>  
@@ -11,7 +11,7 @@ const HomePage = () => {
             revisit your personal bests, and watch your puzzle-solving journey grow with every completed challenge.
             From your first 100-piece puzzle to your most ambitious masterpiece, your collection and accomplishments are all in one place. Happy puzzling!  
             </p>
-        <Login />
+        
         </div>
     );
 };

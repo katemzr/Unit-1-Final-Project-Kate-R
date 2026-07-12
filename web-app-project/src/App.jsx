@@ -6,58 +6,77 @@ import AboutPage from "./components/pages/AboutPage";
 import MyPuzzlesPage from "./components/pages/MyPuzzlesPage";
 import Button from "./components/Button";
 import Footer from "./components/Footer";
+import LoginForm from "./components/LoginForm";
+import Navbar from "./components/NavBar";
 
 
-
-
-function Navbar() {
-return (
-<nav>
-<NavLink
-to="/"
-style={({ isActive }) => ({
-color: isActive ? "red" : "black",
-fontWeight: isActive ? "bold" : "normal",
-textDecoration: "none",
-marginRight: "15px",
-})}
->
-Home
-</NavLink>
-<NavLink
-to="/about"
-style={({ isActive }) => ({
-color: isActive ? "red" : "black",
-fontWeight: isActive ? "bold" : "normal",
-textDecoration: "none",
-marginRight: "15px",
-})}
->
-About
-</NavLink>
-<NavLink
-  to="/mypuzzles"
-  style={({ isActive }) => ({
-color: isActive ? "red" : "black",
-fontWeight: isActive ? "bold" : "normal",
-textDecoration: "none",
-marginRight: "15px",
-})}
->
-My Puzzles
-</NavLink>
-</nav>
-);
-}
 
 function App() {
+ const [ user, setUser ] = useState(null);
+ const handleLogin = (credentials) => {
+    if (credentials.username === "admin" && credentials.password === "1234") {
+      setUser({ name: "Admin", role: "administrator" });
+    } else { 
+      if (credentials.username === "puzzler" && credentials.password === "1234") {
+      setUser({ name: "Puzzler", role: "user" });
+    } else {
+      alert ("Invalid Credentials");
+    }
+
+    }
+ };
+
+ const handleLogout = () => {
+  setUser(null);
+ };
     
 
   return (
-    
     <div id='body-container'>
-      
-      <Header />
+      {user ? (
+        <div>
+          <Header />
+          <BrowserRouter>
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/about" element={<AboutPage />} />
+            <Route path="/mypuzzles" element={<MyPuzzlesPage />} />          
+          </Routes>
+          
+          </BrowserRouter>
+          <h1>Welcome back, {user.name}! 🎉</h1>
+          <p>Role: {user.role}</p>
+          <button onClick={handleLogout}>Log Out</button>
+          <Button label="I'm a reusable button!"/>
+          <Footer />
+        </div>
+        ) : (
+        <div>
+          <Header />
+          <BrowserRouter>
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/about" element={<AboutPage />} />          
+          </Routes>
+          
+          </BrowserRouter>
+          <LoginForm onLogin={handleLogin} />
+          
+          <Footer />
+        </div>
+        )
+      }
+    </div>
+  );
+}
+
+export default App;
+
+
+/*
+<Header />
       <BrowserRouter>
        <Navbar />
         <Routes>
@@ -70,9 +89,8 @@ function App() {
       </BrowserRouter>
       <Button label="I'm a reusable button!"/>
       <Footer />
-    </div>
-    
-  );
-}
 
-export default App;
+          
+*/
+
+

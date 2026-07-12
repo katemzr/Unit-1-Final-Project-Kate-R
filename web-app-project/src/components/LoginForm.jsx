@@ -1,32 +1,46 @@
+import { Navigate } from "react-router";
+import React, { useState } from 'react';
 
-/*
-const Login = () => {
-    const handleSubmit = async (event) => {
+const LoginForm = ({onLogin}) => {
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const handleSubmit = async (event) => {
         event.preventDefault();
-    }
-  
+        onLogin({ username, password });
 
+    };
+    
+    
+   
+    
     return (
-        <div className="login-container" >
-            <h1>Login</h1>
-            <form action="submit" method="GET">
+          
+         
+        
+            
+            <form onSubmit={handleSubmit}>
+              <h1>Login Form</h1>
 
                 <label htmlFor="username">Username:</label>
-                <input type="text" id="username" name="username" placeholder="Enter your username." required />
+                <input type="text" id="username" name="username" placeholder="Enter your username." value={username} required onChange={(e) => setUsername(e.target.value)}/>
 
                 <label htmlFor="password">Password:</label>
-                <input type="password" id="password" name="password" placeholder="Enter your password." required />
+                <input type="password" id="password" name="password" placeholder="Enter your password." value={password} required onChange={(e) => setPassword(e.target.value)}/>
                 
 
-                <button>Login</button>
+                <button type="submit">Login</button> 
 
             </form>
-        </div>
+       
+  
     )
 }
 
-export default Login;
-*/
+export default LoginForm;
+
+
+
+/*
 
 import React, { useState } from 'react';
 function Login() {
@@ -69,3 +83,4 @@ function Login() {
   );
 }
 export default Login;
+*/
