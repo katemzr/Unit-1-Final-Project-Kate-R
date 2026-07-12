@@ -53,6 +53,7 @@ const MyPuzzlesPage = () => {
         <main>
             <div className="main-content">
                 <h1>My Puzzles Page</h1>
+                
                 {puzzleItems}                
                 
               
