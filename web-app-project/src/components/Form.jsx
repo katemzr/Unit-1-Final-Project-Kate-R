@@ -182,7 +182,7 @@ const Form = () => {
                         placeholder="Enter Notes about your Puzzle">
                     </textarea>
 
-                    <button
+                    <button className="buttons"
                         type="reset"
                         value="reset"
                         onClick={() => handleReset()}

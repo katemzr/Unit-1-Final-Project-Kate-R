@@ -6,8 +6,6 @@ header {
     text-align: center;
 }
 
-
-
 body {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     margin: 0;
@@ -23,4 +21,20 @@ body {
     border: 1px solid #ddd;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.buttons {
+    display: inline-block;
+    background-color: rgb(132, 158, 149);
+    color: rgb(252, 252, 252);
+    padding: 5px 10px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.buttons:hover {
+    background-color: rgb(135, 180, 165);
+    transform: translateY(-2px);
 }

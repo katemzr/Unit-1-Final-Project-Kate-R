@@ -28,7 +28,7 @@ const LoginForm = ({onLogin}) => {
                 <input type="password" id="password" name="password" placeholder="Enter your password." value={password} required onChange={(e) => setPassword(e.target.value)}/>
                 
 
-                <button type="submit">Login</button> 
+                <button className="buttons" type="submit">Login</button> 
 
             </form>
        

@@ -47,7 +47,7 @@ function App() {
             <Route path="/mypuzzles" element={<MyPuzzlesPage />} />          
           </Routes>
           <div>          
-            <button onClick={handleLogout}>Log Out</button>
+            <button className="buttons" onClick={handleLogout}>Log Out</button>
           </div>
         </div>
 

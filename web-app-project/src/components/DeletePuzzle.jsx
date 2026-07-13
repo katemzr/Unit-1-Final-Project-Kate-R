@@ -7,7 +7,7 @@ const DeletePuzzle = ({ onDelete }) => {
 
 
     return (
-        <button onClick={onDelete}>Delete</button>
+        <button className="buttons" onClick={onDelete}>Delete</button>
         
     );
 }
