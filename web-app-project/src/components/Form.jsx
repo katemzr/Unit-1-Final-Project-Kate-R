@@ -13,14 +13,15 @@ const Form = () => {
     const [notes, setNotes] = useState("");
     const [location, setLocation] = useState("");
     const [isOnLoan, setIsOnLoan] = useState(false);
+    const [form, setForm] = useState([])
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
+    const handleAddPuzzle = () => {
+        setForm([...form, "New Puzzle"])
     };
 
     const handleCheckboxChange = (e) => {
         setIsOnLoan(event.target.checked)
-    }
+    };
 
     const handleReset = () => {
         setPuzzleTitle("");
@@ -192,10 +193,10 @@ const Form = () => {
                     </button>
 
                     <button
-                        type="submit"
-                        value="submit"
-                        onSubmit={ (e) => handleSubmit(e)}
-                        >Submit
+                        type="button"
+                        value="button"
+                        onClick={handleAddPuzzle}
+                        >Add
                     </button>
 
                 </form>
