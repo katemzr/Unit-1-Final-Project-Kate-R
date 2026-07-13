@@ -55,9 +55,7 @@ const MyPuzzlesPage = () => {
                 <h1>My Puzzles Page</h1>
                 
                 {puzzleItems}                
-                
-              
-        
+                  
                 <Form />
             </div>
         </main>
