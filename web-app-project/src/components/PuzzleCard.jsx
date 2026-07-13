@@ -15,7 +15,7 @@ const PuzzleCard = ({ id, title, link, alt }) => {
     
 
     return (
-        <div>
+        <div className="card">
             <div>
                 <img src={link} alt={alt} width={200} height={300}/>
             </div>
