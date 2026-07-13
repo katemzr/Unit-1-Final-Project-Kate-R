@@ -31,12 +31,3 @@ const PuzzleCard = ({ id, title, link, alt }) => {
 
 export default PuzzleCard;
 
-/*
-<div>
-                <button onClick={() => setIsVisible(false)}>Delete</button>
-            </div>
-            <div>
-                    <input type="text" value={myTitle} placeholder="Change my title." onChange={(e) => setTitle(e.target.value)}></input>
-                    <button onClick={() => setMyTitle("I changed my title.")}>Edit</button>
-                </div>
-            */

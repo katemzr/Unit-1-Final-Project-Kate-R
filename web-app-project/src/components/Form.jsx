@@ -13,11 +13,8 @@ const Form = () => {
     const [notes, setNotes] = useState("");
     const [location, setLocation] = useState("");
     const [isOnLoan, setIsOnLoan] = useState(false);
-    const [form, setForm] = useState([])
 
-    const handleAddPuzzle = () => {
-        setForm([...form, "New Puzzle"])
-    };
+
 
     const handleCheckboxChange = (e) => {
         setIsOnLoan(event.target.checked)
@@ -192,12 +189,7 @@ const Form = () => {
                         >Reset
                     </button>
 
-                    <button
-                        type="button"
-                        value="button"
-                        onClick={handleAddPuzzle}
-                        >Add
-                    </button>
+                    
 
                 </form>
             </fieldset>
@@ -208,3 +200,12 @@ const Form = () => {
 }  
 
 export default Form;
+
+
+/* <button
+                        type="button"
+                        value="button"
+                        onClick={handleAddPuzzle}
+                        >Add
+                    </button>
+*/

@@ -8,6 +8,7 @@ import Footer from "./components/Footer";
 import LoginForm from "./components/LoginForm";
 import NavBar from "./components/NavBar";
 import PuzzleCard from "./components/PuzzleCard";
+import "./index.css"
 
 
 function App() {
