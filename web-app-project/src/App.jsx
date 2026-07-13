@@ -4,7 +4,6 @@ import Header from "./components/Header";
 import HomePage from "./components/pages/HomePage";
 import AboutPage from "./components/pages/AboutPage";
 import MyPuzzlesPage from "./components/pages/MyPuzzlesPage";
-import Button from "./components/Button";
 import Footer from "./components/Footer";
 import LoginForm from "./components/LoginForm";
 import NavBar from "./components/NavBar";
@@ -48,7 +47,6 @@ function App() {
           </Routes>
           <div>          
             <button onClick={handleLogout}>Log Out</button>
-            <Button label="I'm a reusable button!"/>
           </div>
         </div>
 
