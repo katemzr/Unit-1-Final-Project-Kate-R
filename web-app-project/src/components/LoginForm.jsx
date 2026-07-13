@@ -19,7 +19,7 @@ const LoginForm = ({onLogin}) => {
         
             
             <form onSubmit={handleSubmit}>
-              <h1>Login Form</h1>
+              <h1>Hello, Puzzler! Please log in.</h1>
 
                 <label htmlFor="username">Username:</label>
                 <input type="text" id="username" name="username" placeholder="Enter your username." value={username} required onChange={(e) => setUsername(e.target.value)}/>

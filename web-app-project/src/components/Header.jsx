@@ -2,7 +2,7 @@
 
 const Header = () => {
     return (
-        <header>
+        <header className="title-bar">
             <div id="lastpiece">
                 The Last Piece
             </div>

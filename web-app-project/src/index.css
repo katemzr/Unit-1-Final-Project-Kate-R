@@ -7,6 +7,9 @@ header {
 }
 
 body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     margin: 0;
     padding: 2rem;
@@ -37,4 +40,19 @@ body {
 .buttons:hover {
     background-color: rgb(135, 180, 165);
     transform: translateY(-2px);
+}
+
+.title-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header-logo {
+    height: 100px;
+    width: auto;
+    margin-left: 20px;
+}
+
+.footer {
+ flex-shrink: 0;
 }
