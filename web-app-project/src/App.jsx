@@ -19,12 +19,7 @@ function App() {
     if (credentials.username === "admin" && credentials.password === "1234") {
       setUser({ name: "Admin", role: "administrator" });
     } else { 
-      if (credentials.username === "puzzler" && credentials.password === "1234") {
-      setUser({ name: "Puzzler", role: "user" });
-    } else {
-      alert ("Invalid Credentials");
-    }
-
+      
     }
  };
 

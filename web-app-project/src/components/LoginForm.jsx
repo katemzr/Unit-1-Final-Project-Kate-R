@@ -14,10 +14,6 @@ const LoginForm = ({onLogin}) => {
    
     
     return (
-          
-         
-        
-            
             <form onSubmit={handleSubmit}>
               <h1>Hello, Puzzler! Please log in.</h1>
 
@@ -31,10 +27,8 @@ const LoginForm = ({onLogin}) => {
                 <button className="buttons" type="submit">Login</button> 
 
             </form>
-       
-  
-    )
-}
+    );
+};
 
 export default LoginForm;
 
