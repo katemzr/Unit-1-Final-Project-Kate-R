@@ -53,6 +53,14 @@ body {
     margin-left: 20px;
 }
 
-.footer {
- flex-shrink: 0;
+.homepage-main {
+    display: flex;
+    flex: 1;
+    font-size: x-large;
 }
+
+.footer {
+ padding-top: 100px;
+}
+
+
