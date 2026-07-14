@@ -2,7 +2,7 @@ import Form from "../Form";
 import PuzzleCard from "../PuzzleCard";
 import { useState } from "react";
 
-const puzzles = [
+const initialPuzzles = [
     {
         id: "1", 
         title: "My Cup Runneth Over",
@@ -40,14 +40,20 @@ const puzzles = [
 
 ];
 
-const puzzleItems = puzzles.map(puzzle => <PuzzleCard key={puzzle.id} title={puzzle.title} link={puzzle.link} alt={puzzle.alt}/> );
+
 
 
 
 
 const MyPuzzlesPage = () => {
   
-    
+    const [ puzzles, setPuzzles ] = useState(initialPuzzles);
+    const puzzleItems = puzzles.map(puzzle => <PuzzleCard key={puzzle.id} title={puzzle.title} link={puzzle.link} alt={puzzle.alt}/> );
+    const handleAddPuzzle = (newPuzzle) => {
+        
+        setPuzzles((prevPuzzles) => [...prevPuzzles, newPuzzle]);
+    };
+
 
     return (
         <main>
@@ -56,7 +62,7 @@ const MyPuzzlesPage = () => {
                 
                 {puzzleItems}                
                   
-                <Form />
+                <Form onAddPuzzle={handleAddPuzzle}/>
             </div>
         </main>
        

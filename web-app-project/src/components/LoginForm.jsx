@@ -22,10 +22,10 @@ const LoginForm = ({onLogin}) => {
               <h1>Hello, Puzzler! Please log in.</h1>
 
                 <label htmlFor="username">Username:</label>
-                <input type="text" id="username" name="username" placeholder="Enter your username." value={username} required onChange={(e) => setUsername(e.target.value)}/>
+                <input type="text" id="username" name="username" placeholder="Enter: admin" value={username} required onChange={(e) => setUsername(e.target.value)}/>
 
-                <label htmlFor="password">Password:</label>
-                <input type="password" id="password" name="password" placeholder="Enter your password." value={password} required onChange={(e) => setPassword(e.target.value)}/>
+                <label htmlFor="password">Password: 1234</label>
+                <input type="password" id="password" name="password" placeholder="Enter: 1234" value={password} required onChange={(e) => setPassword(e.target.value)}/>
                 
 
                 <button className="buttons" type="submit">Login</button> 

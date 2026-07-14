@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 
-const Form = () => {
+const Form = ({onAddPuzzle}) => {
     const [puzzleTitle,  setPuzzleTitle] = useState("");
     const [puzzleBrand, setPuzzleBrand] = useState("");
     const [puzzleArtist, setPuzzleArtist] = useState("");
@@ -18,7 +18,7 @@ const Form = () => {
 
 
     const handleCheckboxChange = (e) => {
-        setIsOnLoan(event.target.checked)
+        setIsOnLoan(e.target.checked)
     };
 
     const handleReset = () => {
@@ -39,10 +39,13 @@ const Form = () => {
     const handleAddCard = (e) => {
         e.preventDefault();
         const newCard = {
-            title: {puzzleTitle}
+            title: puzzleTitle,
+            puzzlebrand: puzzleBrand,
+            puzzleartist: puzzleArtist,
+            
         };
-        
-        
+       onAddPuzzle(newCard);
+       handleReset(); 
     };
 
     return (
@@ -216,12 +219,3 @@ const Form = () => {
 }  
 
 export default Form;
-
-
-/* <button
-                        type="button"
-                        value="button"
-                        onClick={handleAddPuzzle}
-                        >Add
-                    </button>
-*/
