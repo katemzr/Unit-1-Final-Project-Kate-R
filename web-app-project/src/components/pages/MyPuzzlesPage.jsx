@@ -48,7 +48,11 @@ const initialPuzzles = [
 const MyPuzzlesPage = () => {
   
     const [ puzzles, setPuzzles ] = useState(initialPuzzles);
-    const puzzleItems = puzzles.map(puzzle => <PuzzleCard key={puzzle.id} title={puzzle.title} link={puzzle.link} alt={puzzle.alt}/> );
+    const puzzleItems = puzzles.map(puzzle => <PuzzleCard 
+        key={puzzle.id} title={puzzle.title} link={puzzle.link} alt={puzzle.alt} puzzlebrand={puzzle.puzzlebrand} 
+        puzzleartist={puzzle.puzzleartist} piececount={puzzle.piececount} dimensions={puzzle.dimensions} location={puzzle.location} 
+        purchasedate={puzzle.purchasedate} retailer={puzzle.retailer} startdate={puzzle.startdate} completiondate={puzzle.completiondate}
+        notes={puzzle.notes}/> );
     const handleAddPuzzle = (newPuzzle) => {
         
         setPuzzles((prevPuzzles) => [...prevPuzzles, newPuzzle]);

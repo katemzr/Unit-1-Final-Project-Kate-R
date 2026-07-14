@@ -13,7 +13,6 @@ const Form = ({onAddPuzzle}) => {
     const [completionDate, setCompletionDate] = useState("");
     const [notes, setNotes] = useState("");
     const [location, setLocation] = useState("");
-    const [isOnLoan, setIsOnLoan] = useState(false);
 
 
 
@@ -31,9 +30,8 @@ const Form = ({onAddPuzzle}) => {
         setRetailer("");
         setStartDate("");
         setCompletionDate("");
-        setNotes("");
         setLocation("");
-        setIsOnLoan(false);
+        setNotes("Enter Notes about your Puzzle");
     };
 
     const handleAddCard = (e) => {
@@ -42,8 +40,16 @@ const Form = ({onAddPuzzle}) => {
             title: puzzleTitle,
             puzzlebrand: puzzleBrand,
             puzzleartist: puzzleArtist,
-            
+            piececount: pieceCount,
+            dimensions: dimensions,
+            location: location,
+            purchasedate: purchaseDate,
+            retailer: retailer,
+            startdate: startDate,
+            completiondate: completionDate,
+            notes: notes
         };
+
        onAddPuzzle(newCard);
        handleReset(); 
     };
@@ -173,18 +179,10 @@ const Form = ({onAddPuzzle}) => {
                         }
                         placeholder="Enter Puzzle Completion Date"
                     /> 
-                    
-                    <label htmlFor="onloan">On Loan?:</label>
-                    <input 
-                        type="checkbox"
-                        name="onloan"
-                        id="onloan"
-                        checked={isOnLoan}
-                        onChange={handleCheckboxChange}                       
-                    />
-
+                   
                     <label htmlFor="notes">Notes:</label>
                     <textarea
+                        value={notes}
                         name="notes"
                         id="notes"
                         cols="30"
