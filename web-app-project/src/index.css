@@ -19,7 +19,7 @@ body {
 }
 
 .card {
-    background: white;
+    background: rgb(194, 191, 191);
     padding: 20px;
     border: 1px solid #ddd;
     border-radius: 8px;
