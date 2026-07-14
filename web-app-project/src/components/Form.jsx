@@ -1,5 +1,6 @@
 import { useState } from "react";
 
+
 const Form = () => {
     const [puzzleTitle,  setPuzzleTitle] = useState("");
     const [puzzleBrand, setPuzzleBrand] = useState("");
@@ -33,6 +34,15 @@ const Form = () => {
         setNotes("");
         setLocation("");
         setIsOnLoan(false);
+    };
+
+    const handleAddCard = (e) => {
+        e.preventDefault();
+        const newCard = {
+            title: {puzzleTitle}
+        };
+        
+        
     };
 
     return (
@@ -187,6 +197,12 @@ const Form = () => {
                         value="reset"
                         onClick={() => handleReset()}
                         >Reset
+                    </button>
+
+                    <button className="buttons"
+                        type="submit"
+                        onClick={handleAddCard}
+                        >Add
                     </button>
 
                     
