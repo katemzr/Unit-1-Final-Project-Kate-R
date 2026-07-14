@@ -19,6 +19,11 @@ body {
 }
 
 .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 280px;
     background: rgb(194, 191, 191);
     padding: 20px;
     border: 1px solid #ddd;
