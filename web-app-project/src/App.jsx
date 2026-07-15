@@ -5,11 +5,11 @@ import HomePage from "./components/pages/HomePage";
 import AboutPage from "./components/pages/AboutPage";
 import MyPuzzlesPage from "./components/pages/MyPuzzlesPage";
 import Footer from "./components/Footer";
-import LoginForm from "./components/LoginForm";
 import NavBar from "./components/NavBar";
 import PuzzleCard from "./components/PuzzleCard";
 import "./index.css"
-import LoginFormTwo from "./components/pages/LoginFormTwo";
+import LoginFormTwo from "./components/LoginFormTwo";
+
 
 
 
