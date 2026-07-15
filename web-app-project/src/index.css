@@ -1,3 +1,16 @@
+html {
+    font-size: clamp(18px, 2vw, 20px);
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+
+
 header {
     background-color: rgb(132, 158, 149);
     color: #253238;
@@ -68,6 +81,10 @@ body {
     font-size: x-large;
 }
 
+.main-content {
+    display: flex;
+}
+
 .form {
     display: flex;
     flex-direction: column;
@@ -103,4 +120,10 @@ body {
  padding-top: 100px;
 }
 
-
+@media screen and (min-width: 768px) {
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 15px clamp(20px, 4vw, 30px);
+    }
+}

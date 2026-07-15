@@ -59,7 +59,7 @@ const Form = ({onAddPuzzle}) => {
             <h1>Add a New Puzzle</h1>
             <fieldset>
                 <form onSubmit={handleAddCard} action="#" method="GET">
-                    <label htmlFor="puzzletitle">*Puzzle Title:</label>
+                    <label htmlFor="puzzletitle">Puzzle Title:</label>
                     <input 
                         type="text" 
                         name="puzzletitle" 
@@ -69,7 +69,6 @@ const Form = ({onAddPuzzle}) => {
                             setPuzzleTitle(e.target.value)
                         }
                         placeholder="Enter Puzzle Title"
-                        required
                     />
 
                     <label htmlFor="puzzlebrand">Puzzle Brand:</label>
