@@ -8,7 +8,7 @@ const AboutPage = () => {
              <Animation />
             <p>'The Last Piece' web app is my LaunchCode Unit 1 Final Project. The product must include the following:</p>
 
-            <ul>
+            <ul className="list">
                 <li>Home page with an introduction.</li>
                 <li>About page that is separate from the home page.</li>
                 <li>Easy-to-follow flow between pages for users, linked using React Router.</li>
@@ -18,7 +18,7 @@ const AboutPage = () => {
                 <li>At least one interactive feature.</li>
             </ul>
 
-            <thead>
+            <thead className="table">
                 <tr>
                     <th>
                         My Favorite Puzzles

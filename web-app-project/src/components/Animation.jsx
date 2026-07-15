@@ -1,6 +1,6 @@
 import * as motion from "motion/react-client"
 
-export default function Animation() {
+const Animation = () => {
     const box = {
     width: 100,
     height: 100,
@@ -13,5 +13,7 @@ export default function Animation() {
             animate={{ rotate: 360 }}
             transition={{ duration: 10 }}
         />
-    )
+    );
 }
+
+export default Animation;
