@@ -55,12 +55,12 @@ const MyPuzzlesPage = () => {
 
     return (
         <main >
-            <h1>My Puzzles Page</h1>
+            <h1 className="my-puzzle-h1">My Puzzles Page</h1>
 
-              <div className="main-content"> 
+              <div className="card-container"> 
                 {puzzleItems}                
               </div> 
-                  
+
             <Form onAddPuzzle={handleAddPuzzle}/>
         </main>
        

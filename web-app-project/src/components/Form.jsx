@@ -31,7 +31,7 @@ const Form = ({onAddPuzzle}) => {
         setStartDate("");
         setCompletionDate("");
         setLocation("");
-        setNotes("Enter Notes about your Puzzle");
+        setNotes("");
     };
 
     const handleAddCard = (e) => {

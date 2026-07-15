@@ -81,8 +81,10 @@ body {
     font-size: x-large;
 }
 
-.main-content {
+.card-container {
     display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 .form {
