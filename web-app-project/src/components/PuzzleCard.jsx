@@ -1,7 +1,8 @@
 import { useState } from "react";
 import DeletePuzzle from "./DeletePuzzle";
 
-const PuzzleCard = ({ id, title, link, alt }) => {
+const PuzzleCard = ({ id, title, link, alt, puzzlebrand, puzzleartist, piececount, dimensions, location, purchasedate, retailer, startdate, completiondate, notes
+ }) => {
     
     const [ isVisible, setIsVisible ] = useState(true);
     
@@ -15,12 +16,24 @@ const PuzzleCard = ({ id, title, link, alt }) => {
     
 
     return (
-        <div>
+        <div className="card">
             <div>
                 <img src={link} alt={alt} width={200} height={300}/>
             </div>
             <div>
-                <p>{title}</p>
+                <p><b>{title}</b></p>
+            </div>
+            <div>
+                <p>{puzzlebrand}</p>
+                <p>{puzzleartist}</p>
+                <p>{piececount}</p>
+                <p>{dimensions}</p>
+                <p>{location}</p>
+                <p>{purchasedate}</p>
+                <p>{retailer}</p>
+                <p>{startdate}</p>
+                <p>{completiondate}</p>
+                <p>{notes}</p>
             </div>
             <div>
                 <DeletePuzzle onDelete={handleDelete} />
@@ -31,12 +44,3 @@ const PuzzleCard = ({ id, title, link, alt }) => {
 
 export default PuzzleCard;
 
-/*
-<div>
-                <button onClick={() => setIsVisible(false)}>Delete</button>
-            </div>
-            <div>
-                    <input type="text" value={myTitle} placeholder="Change my title." onChange={(e) => setTitle(e.target.value)}></input>
-                    <button onClick={() => setMyTitle("I changed my title.")}>Edit</button>
-                </div>
-            */

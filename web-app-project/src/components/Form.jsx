@@ -1,6 +1,7 @@
 import { useState } from "react";
 
-const Form = () => {
+
+const Form = ({onAddPuzzle}) => {
     const [puzzleTitle,  setPuzzleTitle] = useState("");
     const [puzzleBrand, setPuzzleBrand] = useState("");
     const [puzzleArtist, setPuzzleArtist] = useState("");
@@ -12,15 +13,12 @@ const Form = () => {
     const [completionDate, setCompletionDate] = useState("");
     const [notes, setNotes] = useState("");
     const [location, setLocation] = useState("");
-    const [isOnLoan, setIsOnLoan] = useState(false);
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-    };
+
 
     const handleCheckboxChange = (e) => {
-        setIsOnLoan(event.target.checked)
-    }
+        setIsOnLoan(e.target.checked)
+    };
 
     const handleReset = () => {
         setPuzzleTitle("");
@@ -32,16 +30,35 @@ const Form = () => {
         setRetailer("");
         setStartDate("");
         setCompletionDate("");
-        setNotes("");
         setLocation("");
-        setIsOnLoan(false);
+        setNotes("Enter Notes about your Puzzle");
+    };
+
+    const handleAddCard = (e) => {
+        e.preventDefault();
+        const newCard = {
+            title: puzzleTitle,
+            puzzlebrand: puzzleBrand,
+            puzzleartist: puzzleArtist,
+            piececount: pieceCount,
+            dimensions: dimensions,
+            location: location,
+            purchasedate: purchaseDate,
+            retailer: retailer,
+            startdate: startDate,
+            completiondate: completionDate,
+            notes: notes
+        };
+
+       onAddPuzzle(newCard);
+       handleReset(); 
     };
 
     return (
         <div className="Form">
             <h1>Add a New Puzzle</h1>
             <fieldset>
-                <form action="#" method="GET">
+                <form onSubmit={handleAddCard} action="#" method="GET">
                     <label htmlFor="puzzletitle">*Puzzle Title:</label>
                     <input 
                         type="text" 
@@ -162,18 +179,10 @@ const Form = () => {
                         }
                         placeholder="Enter Puzzle Completion Date"
                     /> 
-                    
-                    <label htmlFor="onloan">On Loan?:</label>
-                    <input 
-                        type="checkbox"
-                        name="onloan"
-                        id="onloan"
-                        checked={isOnLoan}
-                        onChange={handleCheckboxChange}                       
-                    />
-
+                   
                     <label htmlFor="notes">Notes:</label>
                     <textarea
+                        value={notes}
                         name="notes"
                         id="notes"
                         cols="30"
@@ -184,19 +193,20 @@ const Form = () => {
                         placeholder="Enter Notes about your Puzzle">
                     </textarea>
 
-                    <button
+                    <button className="buttons"
                         type="reset"
                         value="reset"
                         onClick={() => handleReset()}
                         >Reset
                     </button>
 
-                    <button
+                    <button className="buttons"
                         type="submit"
-                        value="submit"
-                        onSubmit={ (e) => handleSubmit(e)}
-                        >Submit
+                        //onClick={handleAddCard}
+                        >Add
                     </button>
+
+                    
 
                 </form>
             </fieldset>

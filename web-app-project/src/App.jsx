@@ -8,20 +8,19 @@ import Footer from "./components/Footer";
 import LoginForm from "./components/LoginForm";
 import NavBar from "./components/NavBar";
 import PuzzleCard from "./components/PuzzleCard";
+import "./index.css"
+import LoginFormTwo from "./components/pages/LoginFormTwo";
+
+
 
 
 function App() {
  const [ user, setUser ] = useState(null);
  const handleLogin = (credentials) => {
-    if (credentials.username === "admin" && credentials.password === "1234") {
+    if (credentials.email === "admin@admin.com" && credentials.password === "1234") {
       setUser({ name: "Admin", role: "administrator" });
     } else { 
-      if (credentials.username === "puzzler" && credentials.password === "1234") {
-      setUser({ name: "Puzzler", role: "user" });
-    } else {
-      alert ("Invalid Credentials");
-    }
-
+      
     }
  };
 
@@ -29,7 +28,8 @@ function App() {
 
   setUser(null);
  };
-    
+   
+ 
 
   return (
     <BrowserRouter>
@@ -46,7 +46,7 @@ function App() {
             <Route path="/mypuzzles" element={<MyPuzzlesPage />} />          
           </Routes>
           <div>          
-            <button onClick={handleLogout}>Log Out</button>
+            <button className="buttons" onClick={handleLogout}>Log Out</button>
           </div>
         </div>
 
@@ -54,7 +54,7 @@ function App() {
 
         <div>
           <Routes>
-             <Route path="/" element={<LoginForm onLogin={handleLogin} />} />
+             <Route path="/" element={<LoginFormTwo onLogin={handleLogin} />} />
             <Route path="/" element={<HomePage />} />
             <Route path="/about" element={<AboutPage />} />          
           </Routes>

@@ -14,7 +14,7 @@ const AboutPage = () => {
                 <li>At least one interactive feature.</li>
             </ul>
 
-            <table>
+            <thead>
                 <tr>
                     <th>
                         My Favorite Puzzles
@@ -39,7 +39,7 @@ const AboutPage = () => {
                     <td>Turbo 3000</td>
                     <td>This one was a gift - as part of a set - for Christmas, from my boyfriend.</td>
                 </tr>
-            </table>
+            </thead>
         </div> 
     );
 };
