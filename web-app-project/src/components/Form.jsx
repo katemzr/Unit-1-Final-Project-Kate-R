@@ -55,7 +55,7 @@ const Form = ({onAddPuzzle}) => {
     };
 
     return (
-        <div className="Form">
+        <div className="form">
             <h1>Add a New Puzzle</h1>
             <fieldset>
                 <form onSubmit={handleAddCard} action="#" method="GET">

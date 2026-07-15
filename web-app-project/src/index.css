@@ -25,6 +25,7 @@ body {
     align-items: center;
     width: 280px;
     background: rgb(194, 191, 191);
+    margin-bottom: 20px;
     padding: 20px;
     border: 1px solid #ddd;
     border-radius: 8px;
@@ -40,6 +41,7 @@ body {
     padding: 5px 10px;
     text-decoration: none;
     border-radius: 5px;
+    margin: 15px;
     font-weight: bold;
     transition: 0.3s ease;
 }
@@ -64,6 +66,21 @@ body {
     display: flex;
     flex: 1;
     font-size: x-large;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgb(194, 191, 191);
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05); 
+    font-weight: bold;
+    margin-top: 50px;
+    margin-bottom: 30px;
 }
 
 .footer {
