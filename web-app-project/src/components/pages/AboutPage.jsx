@@ -1,7 +1,11 @@
+import Animation from "../Animation";
+
+
 const AboutPage = () => {
     return (
         <div>
             <h1>About 'The Last Piece'</h1>
+             <Animation />
             <p>'The Last Piece' web app is my LaunchCode Unit 1 Final Project. The product must include the following:</p>
 
             <ul>
