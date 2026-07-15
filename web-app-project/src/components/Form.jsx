@@ -58,7 +58,7 @@ const Form = ({onAddPuzzle}) => {
         <div className="Form">
             <h1>Add a New Puzzle</h1>
             <fieldset>
-                <form action="#" method="GET">
+                <form onSubmit={handleAddCard} action="#" method="GET">
                     <label htmlFor="puzzletitle">*Puzzle Title:</label>
                     <input 
                         type="text" 
@@ -202,7 +202,7 @@ const Form = ({onAddPuzzle}) => {
 
                     <button className="buttons"
                         type="submit"
-                        onClick={handleAddCard}
+                        //onClick={handleAddCard}
                         >Add
                     </button>
 

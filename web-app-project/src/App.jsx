@@ -9,6 +9,7 @@ import LoginForm from "./components/LoginForm";
 import NavBar from "./components/NavBar";
 import PuzzleCard from "./components/PuzzleCard";
 import "./index.css"
+import LoginFormTwo from "./components/pages/LoginFormTwo";
 
 
 
@@ -16,7 +17,7 @@ import "./index.css"
 function App() {
  const [ user, setUser ] = useState(null);
  const handleLogin = (credentials) => {
-    if (credentials.username === "admin" && credentials.password === "1234") {
+    if (credentials.email === "admin@admin.com" && credentials.password === "1234") {
       setUser({ name: "Admin", role: "administrator" });
     } else { 
       
@@ -53,7 +54,7 @@ function App() {
 
         <div>
           <Routes>
-             <Route path="/" element={<LoginForm onLogin={handleLogin} />} />
+             <Route path="/" element={<LoginFormTwo onLogin={handleLogin} />} />
             <Route path="/" element={<HomePage />} />
             <Route path="/about" element={<AboutPage />} />          
           </Routes>
