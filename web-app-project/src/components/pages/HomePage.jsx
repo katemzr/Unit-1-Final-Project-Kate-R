@@ -1,4 +1,4 @@
-import LoginFormTwo1234 from "../LoginFormTwo";
+import LoginFormTwo from "../LoginFormTwo";
 
 
 const HomePage= () => {
