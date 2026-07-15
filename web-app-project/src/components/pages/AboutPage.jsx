@@ -6,7 +6,7 @@ const AboutPage = () => {
         <div>
             <h1>About 'The Last Piece'</h1>
              <Animation />
-            <p>'The Last Piece' web app is my LaunchCode Unit 1 Final Project. The product must include the following:</p>
+            <p><b>'The Last Piece' web app is my LaunchCode Unit 1 Final Project. The product must include the following:</b></p>
 
             <ul className="list">
                 <li>Home page with an introduction.</li>
@@ -16,12 +16,13 @@ const AboutPage = () => {
                 <li>Footer with text or links to additional resources.</li>
                 <li>Features where users can add, modify, OR delete content.</li>
                 <li>At least one interactive feature.</li>
+                <li>Simple animation(s) - perhaps an orange square that spins around.</li>
             </ul>
 
             <thead className="table">
                 <tr>
                     <th>
-                        My Favorite Puzzles
+                        <b>My Favorite Puzzles</b>
                     </th>
                     <th>
                         Why I Like This Puzzle
@@ -29,7 +30,7 @@ const AboutPage = () => {
                 </tr>
                 <tr>
                     <td>
-                        Life, the Greatest Puzzle
+                        Life
                     </td>
                     <td>
                         The reason I love this puzzle is because at the time I bought it, it was the world's largest puzzle - measuring 14 feet by 5 feet.
