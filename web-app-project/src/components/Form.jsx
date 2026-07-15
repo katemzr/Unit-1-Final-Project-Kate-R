@@ -196,7 +196,7 @@ const Form = ({onAddPuzzle}) => {
                             name="notes"
                             id="notes"
                             cols="30"
-                            rows="5"
+                            rows="4"
                             onChange={ (e) =>
                                 setNotes(e.target.value)
                             }
@@ -215,8 +215,6 @@ const Form = ({onAddPuzzle}) => {
                         //onClick={handleAddCard}
                         >Add
                     </button>
-
-                    
 
                 </form>
             </fieldset>
