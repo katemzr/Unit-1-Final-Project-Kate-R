@@ -8,7 +8,7 @@ const Animation = () => {
     borderRadius: 5,
 }
     return (
-        <motion.div
+        <motion.div className="square"
             style={box}
             animate={{ rotate: 360 }}
             transition={{ duration: 10 }}

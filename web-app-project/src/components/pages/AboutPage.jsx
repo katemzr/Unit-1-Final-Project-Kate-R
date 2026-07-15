@@ -5,7 +5,7 @@ const AboutPage = () => {
     return (
         <div>
             <h1>About 'The Last Piece'</h1>
-             <Animation />
+            
             <p><b>'The Last Piece' web app is my LaunchCode Unit 1 Final Project. The product must include the following:</b></p>
 
             <ul className="list">
@@ -45,6 +45,11 @@ const AboutPage = () => {
                     <td>This one was a gift - as part of a set - for Christmas, from my boyfriend.</td>
                 </tr>
             </thead>
+
+            <div>
+                <Animation />
+            </div>
+
         </div> 
     );
 };

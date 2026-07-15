@@ -71,22 +71,5 @@ function App() {
 export default App;
 
 
-/*
-<Header />
-      <BrowserRouter>
-       <Navbar />
-        <Routes>
-
-          <Route path="/" element={<HomePage />} />
-          <Route path="/about" element={<AboutPage />} />
-          <Route path="/mypuzzles" element={<MyPuzzlesPage />} />          
-        </Routes>
-        
-      </BrowserRouter>
-      <Button label="I'm a reusable button!"/>
-      <Footer />
-
-          
-*/
 
 
