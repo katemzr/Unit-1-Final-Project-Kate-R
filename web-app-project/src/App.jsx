@@ -26,7 +26,7 @@ function App() {
 
  const handleLogout = () => {
   setUser(null);
-  //<Route path="/" element={<LoginFormTwo onLogin={handleLogin} />} />
+  
  };
    
  
@@ -69,9 +69,3 @@ function App() {
 }
 
 export default App;
-
-/*
-<Route path="/" element={<HomePage />} />
-            <Route path="/about" element={<AboutPage />} />   
-
-*/
