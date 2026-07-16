@@ -25,8 +25,8 @@ function App() {
  };
 
  const handleLogout = () => {
-
   setUser(null);
+  //<Route path="/" element={<LoginFormTwo onLogin={handleLogin} />} />
  };
    
  
@@ -54,9 +54,9 @@ function App() {
 
         <div>
           <Routes>
-             <Route path="/" element={<LoginFormTwo onLogin={handleLogin} />} />
-            <Route path="/" element={<HomePage />} />
-            <Route path="/about" element={<AboutPage />} />          
+            <Route path="/" element={<LoginFormTwo onLogin={handleLogin} />} /> 
+            <Route path="/about" element={<LoginFormTwo onLogin={handleLogin} />} />
+            <Route path="/mypuzzles" element={<LoginFormTwo onLogin={handleLogin} />} />      
           </Routes>
         </div>
 
@@ -70,6 +70,8 @@ function App() {
 
 export default App;
 
+/*
+<Route path="/" element={<HomePage />} />
+            <Route path="/about" element={<AboutPage />} />   
 
-
-
+*/

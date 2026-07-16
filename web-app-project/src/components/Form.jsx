@@ -70,6 +70,7 @@ const Form = ({onAddPuzzle}) => {
                                 setPuzzleTitle(e.target.value)
                             }
                             placeholder="Enter Puzzle Title"
+                            required
                         />
                     </div>
                     <div className="form-group">
@@ -212,7 +213,6 @@ const Form = ({onAddPuzzle}) => {
 
                     <button className="buttons"
                         type="submit"
-                        //onClick={handleAddCard}
                         >Add
                     </button>
 
