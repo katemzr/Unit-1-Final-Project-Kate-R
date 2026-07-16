@@ -53,7 +53,7 @@ return (
       <h2>Login</h2>
       <form onSubmit={handleSubmit}>
         <div>
-          <label>Email:</label>
+          <label>Email (admin@admin.com):</label>
           <input
             type="email"
             name="email"
@@ -64,7 +64,7 @@ return (
         </div>
 
         <div style={{ marginTop: '15px' }}>
-          <label>Password:</label>
+          <label>Password (1234):</label>
           <input
             type="password"
             name="password"

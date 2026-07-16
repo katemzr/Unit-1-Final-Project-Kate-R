@@ -1,4 +1,5 @@
-import Login from "../LoginForm";
+import LoginFormTwo from "../LoginFormTwo";
+
 
 
 const HomePage= () => {
@@ -6,6 +7,7 @@ const HomePage= () => {
         <main className="homepage-main">
             <div>       
                 <h1>Welcome to The Last Piece!</h1>  
+               
                 <p>
                 Whether you're a casual puzzler or a dedicated enthusiast, this is your home for everything puzzle-related.
                 Organize your personal jigsaw puzzle collection, keep track of the puzzles you own, and build a complete record of every puzzle you've completed. Log your finish times, 

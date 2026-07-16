@@ -40,11 +40,6 @@ const initialPuzzles = [
 
 ];
 
-
-
-
-
-
 const MyPuzzlesPage = () => {
   
     const [ puzzles, setPuzzles ] = useState(initialPuzzles);
@@ -58,16 +53,15 @@ const MyPuzzlesPage = () => {
         setPuzzles((prevPuzzles) => [...prevPuzzles, newPuzzle]);
     };
 
-
     return (
-        <main>
-            <div className="main-content">
-                <h1>My Puzzles Page</h1>
-                
+        <main >
+            <h1 className="my-puzzle-h1">My Puzzles Page</h1>
+
+              <div className="card-container"> 
                 {puzzleItems}                
-                  
-                <Form onAddPuzzle={handleAddPuzzle}/>
-            </div>
+              </div> 
+
+            <Form onAddPuzzle={handleAddPuzzle}/>
         </main>
        
     );

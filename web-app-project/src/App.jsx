@@ -5,11 +5,11 @@ import HomePage from "./components/pages/HomePage";
 import AboutPage from "./components/pages/AboutPage";
 import MyPuzzlesPage from "./components/pages/MyPuzzlesPage";
 import Footer from "./components/Footer";
-import LoginForm from "./components/LoginForm";
 import NavBar from "./components/NavBar";
 import PuzzleCard from "./components/PuzzleCard";
 import "./index.css"
-import LoginFormTwo from "./components/pages/LoginFormTwo";
+import LoginFormTwo from "./components/LoginFormTwo";
+
 
 
 
@@ -25,8 +25,8 @@ function App() {
  };
 
  const handleLogout = () => {
-
   setUser(null);
+  
  };
    
  
@@ -54,9 +54,9 @@ function App() {
 
         <div>
           <Routes>
-             <Route path="/" element={<LoginFormTwo onLogin={handleLogin} />} />
-            <Route path="/" element={<HomePage />} />
-            <Route path="/about" element={<AboutPage />} />          
+            <Route path="/" element={<LoginFormTwo onLogin={handleLogin} />} /> 
+            <Route path="/about" element={<LoginFormTwo onLogin={handleLogin} />} />
+            <Route path="/mypuzzles" element={<LoginFormTwo onLogin={handleLogin} />} />      
           </Routes>
         </div>
 
@@ -69,24 +69,3 @@ function App() {
 }
 
 export default App;
-
-
-/*
-<Header />
-      <BrowserRouter>
-       <Navbar />
-        <Routes>
-
-          <Route path="/" element={<HomePage />} />
-          <Route path="/about" element={<AboutPage />} />
-          <Route path="/mypuzzles" element={<MyPuzzlesPage />} />          
-        </Routes>
-        
-      </BrowserRouter>
-      <Button label="I'm a reusable button!"/>
-      <Footer />
-
-          
-*/
-
-
