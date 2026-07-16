@@ -132,28 +132,16 @@ body {
  padding-top: 100px;
 }
 
-/*
-@media screen and (min-width: 480px) {
- 
-}
+/*Desktop-First approach*/
 
-@media screen and (min-width: 768px) {
-       header {
-        flex-direction: row;
-        justify-content: space-between;
-        padding: 15px clamp(20px, 4vw, 30px);
+@media (max-width: 768px) {  /*tablet screens*/
+    body {
+        background-color: rgb(175, 17, 17);
     }
 }
 
-
-html {
-    font-size: clamp(18px, 2vw, 20px);
-    height: 100vh;
-    box-sizing: border-box;
+@media (max-width: 480px) {  /*small mobile screens*/
+    body {
+        background-color: rgb(23, 230, 68);
+    } 
 }
-
-*:before,
-*:after {
-    box-sizing: inherit;
-}
-    */
