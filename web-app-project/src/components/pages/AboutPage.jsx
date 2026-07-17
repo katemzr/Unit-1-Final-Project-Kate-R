@@ -47,7 +47,7 @@ const AboutPage = () => {
                 </thead>
             </table>47
             <div>
-                <Animation />
+                <Animation /> 
             </div>
 
         </>

@@ -2,7 +2,7 @@ import Form from "../Form";
 import PuzzleCard from "../PuzzleCard";
 import { useState } from "react";
 
-const initialPuzzles = [
+const initialPuzzles = [  //puzzles to appear on My Puzzles page to simulate a user's saved puzzle cards.
     {
         id: "1", 
         title: "My Cup Runneth Over",
@@ -32,7 +32,7 @@ const initialPuzzles = [
         title: "Planets",
         link: '/images/puzzle5.jpg',
         alt: "image of Planets puzzle"
-        
+
     },{
         id: "6",
         title: "Tree of Life Tapestry",
