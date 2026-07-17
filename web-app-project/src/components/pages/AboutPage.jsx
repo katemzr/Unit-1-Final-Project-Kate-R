@@ -17,6 +17,7 @@ const AboutPage = () => {
                 <li>At least one interactive feature.</li>
                 <li>Simple animation(s) - perhaps an orange square that spins around.</li>
             </ul>
+            
             <table>
                 <thead className="table">
                     <tr>
@@ -44,7 +45,7 @@ const AboutPage = () => {
                         <td>This one was a gift - as part of a set - for Christmas, from my boyfriend.</td>
                     </tr>
                 </thead>
-            </table>
+            </table>47
             <div>
                 <Animation />
             </div>
