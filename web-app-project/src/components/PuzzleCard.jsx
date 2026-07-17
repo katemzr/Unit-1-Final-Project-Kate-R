@@ -14,7 +14,6 @@ const PuzzleCard = ({ id, title, link, alt, puzzlebrand, puzzleartist, piececoun
         return null;
     }
     
-
     return (
         <div className="card">
             <div>

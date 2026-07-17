@@ -45,7 +45,7 @@ const AboutPage = () => {
                         <td>This one was a gift - as part of a set - for Christmas, from my boyfriend.</td>
                     </tr>
                 </thead>
-            </table>47
+            </table>
             <div>
                 <Animation /> 
             </div>
