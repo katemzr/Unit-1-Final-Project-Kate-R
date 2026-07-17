@@ -24,6 +24,7 @@ const PuzzleCard = ({ id, title, link, alt, puzzlebrand, puzzleartist, piececoun
                 <p><b>{title}</b></p>
             </div>
             <div>
+                <p>{id}</p>
                 <p>{puzzlebrand}</p>
                 <p>{puzzleartist}</p>
                 <p>{piececount}</p>

@@ -2,6 +2,7 @@ import { useState } from "react";
 
 
 const Form = ({onAddPuzzle}) => {
+    const [id, setID] = useState(7);
     const [puzzleTitle,  setPuzzleTitle] = useState("");
     const [puzzleBrand, setPuzzleBrand] = useState("");
     const [puzzleArtist, setPuzzleArtist] = useState("");
@@ -14,11 +15,6 @@ const Form = ({onAddPuzzle}) => {
     const [notes, setNotes] = useState("");
     const [location, setLocation] = useState("");
 
-
-
-    const handleCheckboxChange = (e) => {
-        setIsOnLoan(e.target.checked)
-    };
 
     const handleReset = () => {
         setPuzzleTitle("");
@@ -37,6 +33,7 @@ const Form = ({onAddPuzzle}) => {
     const handleAddCard = (e) => {
         e.preventDefault();
         const newCard = {
+            id: id,
             title: puzzleTitle,
             puzzlebrand: puzzleBrand,
             puzzleartist: puzzleArtist,
@@ -52,6 +49,7 @@ const Form = ({onAddPuzzle}) => {
 
        onAddPuzzle(newCard);
        handleReset(); 
+       setID(prev => prev +1);
     };
 
     return (
@@ -60,6 +58,7 @@ const Form = ({onAddPuzzle}) => {
             <fieldset>
                 <form onSubmit={handleAddCard} action="#" method="GET">
                     <div className="form-group">
+                        
                         <label htmlFor="puzzletitle">Puzzle Title:</label>
                         <input 
                             type="text" 
@@ -212,7 +211,7 @@ const Form = ({onAddPuzzle}) => {
                     </button>
 
                     <button className="buttons"
-                        type="submit"
+                        type="submit" 
                         >Add
                     </button>
 
