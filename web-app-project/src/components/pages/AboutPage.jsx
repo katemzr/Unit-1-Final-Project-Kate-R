@@ -17,6 +17,7 @@ const AboutPage = () => {
                 <li>At least one interactive feature.</li>
                 <li>Simple animation(s) - perhaps an orange square that spins around.</li>
             </ul>
+            
             <table>
                 <thead className="table">
                     <tr>
@@ -46,7 +47,7 @@ const AboutPage = () => {
                 </thead>
             </table>
             <div>
-                <Animation />
+                <Animation /> 
             </div>
 
         </>

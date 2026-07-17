@@ -131,17 +131,3 @@ body {
 .footer {
  padding-top: 100px;
 }
-
-/*Desktop-First approach*/
-
-@media (max-width: 768px) {  /*tablet screens*/
-    body {
-        background-color: rgb(175, 17, 17);
-    }
-}
-
-@media (max-width: 480px) {  /*small mobile screens*/
-    body {
-        background-color: rgb(23, 230, 68);
-    } 
-}
