@@ -159,14 +159,13 @@ const Form = ({onAddPuzzle}) => {
                     <div className="form-group">
                         <label htmlFor="purchasedate">Purchase Date:</label>
                         <input 
-                            type="text" 
+                            type="date" 
                             name="purchasedate" 
                             id="purchasedate" 
                             value={purchaseDate}
                             onChange={ (e) =>
                                 setPurchaseDate(e.target.value)
                             }
-                            placeholder="Enter Purchase Date"
                         />
                     </div>
                     <div className="form-group">
@@ -185,27 +184,27 @@ const Form = ({onAddPuzzle}) => {
                     <div className="form-group">
                         <label htmlFor="startdate">Start Date:</label>
                         <input 
-                            type="text" 
+                            type="date" 
                             name="startdate" 
                             id="startdate" 
                             value={startDate}
+                            max={completionDate}
                             onChange={ (e) =>
                                 setStartDate(e.target.value)
                             }
-                            placeholder="Enter Puzzle Start Date"
                         />
                     </div>
                     <div className="form-group">
                         <label htmlFor="completiondate">Completion Date:</label>
                         <input 
-                            type="text" 
+                            type="date" 
                             name="completiondate" 
                             id="completiondate" 
                             value={completionDate}
+                            min={startDate}
                             onChange={ (e) =>
                                 setCompletionDate(e.target.value)
-                            }
-                            placeholder="Enter Puzzle Completion Date"
+                            }                          
                         /> 
                     </div>
                     <div className="form-group">
