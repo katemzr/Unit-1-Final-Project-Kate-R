@@ -38,10 +38,6 @@ const AboutPage = () => {
                     </tr>
                 </thead>
             </table>
-            <div>
-                <Animation /> 
-            </div>
-
         </>
     );
 };

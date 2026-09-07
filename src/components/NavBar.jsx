@@ -19,7 +19,7 @@ function NavBar() {
           textDecoration: "none",
           marginRight: "15px",
         })}
-        >About
+        >Contact Us
       </NavLink>
 
       <NavLink

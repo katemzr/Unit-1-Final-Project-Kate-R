@@ -1,4 +1,6 @@
+/*
 import * as motion from "motion/react-client"
+
 
 const Animation = () => {
     const box = {
@@ -15,5 +17,27 @@ const Animation = () => {
         />
     );
 }
+
+export default Animation;
+*/
+
+
+
+import * as motion from "motion/react-client";
+
+const Animation = () => {
+    return (
+        <motion.img
+            src="/public/images/puzzle-piece-solid-full.svg"
+            alt="Spinning Orange Puzzle Piece"
+            style={{
+                width: 100,
+                height: 100
+            }}
+            animate={{ rotate: 360 }}
+            transition={{ duration: 10 }}
+        />
+    );
+};
 
 export default Animation;
