@@ -6,37 +6,37 @@ const initialPuzzles = [  //puzzles to appear on My Puzzles page to simulate a u
     {
         id: "1", 
         title: "My Cup Runneth Over",
-        link: '/images/puzzle1.jpg',
+        link: '/images/MyCupRunnethOver.jpg',
         alt: "image of My Cup Runneth Over puzzle"
 
     },{
         id: "2",
         title: "Worship of Trees",
-        link: '/images/puzzle2.jpg',
+        link: '/images/WorshipOfTrees.jpg',
         alt: "image of Worship of Trees puzzle"
 
     },{
         id: "3",
         title: "The Exploded Beetle",
-        link: '/images/puzzle3.jpg',
+        link: '/images/TheExplodedBeetle.jpg',
         alt: "image of the Exploded Beetle puzzle"
 
     },{
         id: "4",
         title: "Bottle Caps",
-        link: '/images/puzzle4.jpg',
+        link: '/images/BottleCaps.jpg',
         alt: "image of Bottle Caps puzzle"
 
     },{
         id: "5",
-        title: "Planets",
-        link: '/images/puzzle5.jpg',
-        alt: "image of Planets puzzle"
+        title: "Turbo 3000",
+        link: '/images/Turbo3000.jpg',
+        alt: "image of Turbo 3000 puzzle"
 
     },{
         id: "6",
         title: "Tree of Life Tapestry",
-        link: '/images/puzzle6.jpg',
+        link: '/images/TreeOfLifeTapestry.jpg',
         alt: "image of Tree of Life Tapestry puzzle"
     }
 
