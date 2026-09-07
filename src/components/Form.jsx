@@ -7,7 +7,8 @@ const Form = ({onAddPuzzle}) => {
     const [puzzleBrand, setPuzzleBrand] = useState("");
     const [puzzleArtist, setPuzzleArtist] = useState("");
     const [pieceCount, setPieceCount] = useState("");
-    const [dimensions, setDimensions] = useState("");
+    const [height, setHeight] = useState("");
+    const [width, setWidth] = useState("");
     const [purchaseDate, setPurchaseDate] = useState("");
     const [retailer, setRetailer] = useState("");
     const [startDate, setStartDate] = useState("");
@@ -21,7 +22,8 @@ const Form = ({onAddPuzzle}) => {
         setPuzzleBrand("");
         setPuzzleArtist("");
         setPieceCount("");
-        setDimensions("");
+        setHeight("");
+        setWidth("");
         setPurchaseDate("");
         setRetailer("");
         setStartDate("");
@@ -38,7 +40,8 @@ const Form = ({onAddPuzzle}) => {
             puzzlebrand: puzzleBrand,
             puzzleartist: puzzleArtist,
             piececount: pieceCount,
-            dimensions: dimensions,
+            height: height,
+            width: width,
             location: location,
             purchasedate: purchaseDate,
             retailer: retailer,
@@ -101,7 +104,7 @@ const Form = ({onAddPuzzle}) => {
                     <div className="form-group">
                         <label htmlFor="piececount">Piece Count:</label>
                         <input 
-                            type="text" 
+                            type="number" 
                             name="piececount" 
                             id="piececount" 
                             value={pieceCount}
@@ -109,20 +112,36 @@ const Form = ({onAddPuzzle}) => {
                                 setPieceCount(e.target.value)
                             }
                             placeholder="Enter Piece Count"
+                            min="1"
                         />
                     </div>
                     <div className="form-group">
-                        <label htmlFor="dimensions">Dimensions:</label>
+                        <label htmlFor="height">Height:</label>
                         <input 
-                            type="text" 
-                            name="dimensions" 
-                            id="dimensions" 
-                            value={dimensions}
+                            type="number" 
+                            name="height" 
+                            id="height" 
+                            value={height}
                             onChange={ (e) =>
-                                setDimensions(e.target.value)
+                                setHeight(e.target.value)
                             }
-                            placeholder="Enter Puzzle Dimensions"
-                        /> 
+                            placeholder="Enter Puzzle Height"
+                            min="1"
+                        />
+                    </div>
+                    <div className="form-group">
+                        <label htmlFor="width">Width:</label>
+                        <input 
+                            type="number" 
+                            name="width" 
+                            id="width" 
+                            value={width}
+                            onChange={ (e) =>
+                                setWidth(e.target.value)
+                            }
+                            placeholder="Enter Puzzle Width"
+                            min="1"
+                        />
                     </div>
                     <div className="form-group">
                         <label htmlFor="location">Location:</label>

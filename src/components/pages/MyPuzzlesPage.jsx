@@ -56,7 +56,8 @@ const MyPuzzlesPage = () => {
             puzzlebrand={puzzle.puzzlebrand} 
             puzzleartist={puzzle.puzzleartist} 
             piececount={puzzle.piececount} 
-            dimensions={puzzle.dimensions} 
+            height={puzzle.height}
+            width={puzzle.width}
             location={puzzle.location} 
             purchasedate={puzzle.purchasedate} 
             retailer={puzzle.retailer} 
