@@ -2,7 +2,7 @@ import { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router";
 import Header from "./components/Header";
 import HomePage from "./components/pages/HomePage";
-import AboutPage from "./components/pages/AboutPage";
+import ContactUsPage from "./components/pages/ContactUsPage";
 import MyPuzzlesPage from "./components/pages/MyPuzzlesPage";
 import Footer from "./components/Footer";
 import NavBar from "./components/NavBar";
@@ -38,7 +38,7 @@ function App() {
           <NavBar />
           <Routes>
             <Route path="/" element={<HomePage />} />
-            <Route path="/about" element={<AboutPage />} />
+            <Route path="/contactus" element={<ContactUsPage />} />
             <Route path="/mypuzzles" element={<MyPuzzlesPage />} />          
           </Routes>
           <div>          
@@ -51,7 +51,7 @@ function App() {
         <div>
           <Routes>
             <Route path="/" element={<LoginForm onLogin={handleLogin} />} /> 
-            <Route path="/about" element={<LoginForm onLogin={handleLogin} />} />
+            <Route path="/contactus" element={<LoginForm onLogin={handleLogin} />} />
             <Route path="/mypuzzles" element={<LoginForm onLogin={handleLogin} />} />      
           </Routes>
         </div>

@@ -12,7 +12,7 @@ function NavBar() {
 
 
       <NavLink
-        to="/about"
+        to="/contactus"
         style={({ isActive }) => ({
           color: isActive ? "rgb(132, 158, 149" : "black",
           fontWeight: isActive ? "bold" : "normal",
