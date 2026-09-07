@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { BrowserRouter, Routes, Route, NavLink, Navigate, useNavigate } from "react-router";
+import { BrowserRouter, Routes, Route } from "react-router";
 import Header from "./components/Header";
 import HomePage from "./components/pages/HomePage";
 import AboutPage from "./components/pages/AboutPage";
@@ -19,8 +19,6 @@ function App() {
  const handleLogin = (credentials) => {
     if (credentials.email === "admin@admin.com" && credentials.password === "1234") {
       setUser({ name: "Admin", role: "administrator" });
-    } else { 
-      
     }
  };
 

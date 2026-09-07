@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, NavLink } from "react-router";
+import { NavLink } from "react-router";
 
 function NavBar() {
   return (
