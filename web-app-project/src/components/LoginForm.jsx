@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function LoginFormTwo ({onLogin}) {
+function LoginForm ({onLogin}) {
     const [ formData, setFormData] = useState({ email: "", password: "" });
     const [ errors, setErrors ] = useState({});
 
@@ -80,4 +80,4 @@ return (
   );
 }
 
-export default LoginFormTwo;
+export default LoginForm;

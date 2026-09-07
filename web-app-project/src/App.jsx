@@ -8,7 +8,7 @@ import Footer from "./components/Footer";
 import NavBar from "./components/NavBar";
 import PuzzleCard from "./components/PuzzleCard";
 import "./index.css"
-import LoginFormTwo from "./components/LoginFormTwo";
+import LoginForm from "./components/LoginForm";
 
 
 
@@ -50,9 +50,9 @@ function App() {
 
         <div>
           <Routes>
-            <Route path="/" element={<LoginFormTwo onLogin={handleLogin} />} /> 
-            <Route path="/about" element={<LoginFormTwo onLogin={handleLogin} />} />
-            <Route path="/mypuzzles" element={<LoginFormTwo onLogin={handleLogin} />} />      
+            <Route path="/" element={<LoginForm onLogin={handleLogin} />} /> 
+            <Route path="/about" element={<LoginForm onLogin={handleLogin} />} />
+            <Route path="/mypuzzles" element={<LoginForm onLogin={handleLogin} />} />      
           </Routes>
         </div>
 
