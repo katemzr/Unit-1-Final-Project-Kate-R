@@ -36,7 +36,6 @@ const Form = ({onAddPuzzle}) => {
 
     const handleAddCard = (e) => {
         e.preventDefault();
-        alert("image: "+image);
         const newCard = {   
             id: id,
             image: image || "/images/Placeholder.jpg",

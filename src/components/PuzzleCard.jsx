@@ -18,7 +18,7 @@ const PuzzleCard = ({ id, image, title, link, alt, puzzlebrand, puzzleartist, pi
         <div className="card">
             <div>
                 <img src={link} alt={alt} width={200} height={300}/>
-                <img src={image} alt="placeholder" width={200} height={300}/>
+                <img src={image} alt={alt} width={200} height={300}/>
             </div>
             <div>
                 <p><b>{title}</b></p>
