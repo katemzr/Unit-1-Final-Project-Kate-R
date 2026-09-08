@@ -39,7 +39,7 @@ const Form = ({onAddPuzzle}) => {
         alert("image: "+image);
         const newCard = {   
             id: id,
-            image: image || "/public/images/Placeholder.jpg",
+            image: image || "/images/Placeholder.jpg",
             title: puzzleTitle,
             puzzlebrand: puzzleBrand,
             puzzleartist: puzzleArtist,

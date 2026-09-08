@@ -3,7 +3,7 @@ import * as motion from "motion/react-client";
 const Animation = () => {
     return (
         <motion.img
-            src="/public/images/puzzle-piece-solid-full.svg"
+            src="/images/puzzle-piece-solid-full.svg"
             alt="Spinning Orange Puzzle Piece"
             style={{
                 width: 100,
