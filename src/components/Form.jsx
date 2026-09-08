@@ -63,7 +63,7 @@ const Form = ({onAddPuzzle}) => {
             <h1>Add a New Puzzle</h1>
             <fieldset>
                 <form onSubmit={handleAddCard} action="#" method="GET">
-                    <div className="form-group">
+                    <div className="form-group full-width">
                         <label htmlFor="image">Puzzle Image:</label>
                         <input
                             type="text" 
@@ -222,7 +222,7 @@ const Form = ({onAddPuzzle}) => {
                             }                          
                         /> 
                     </div>
-                    <div className="form-group">
+                    <div className="form-group full-width">
                         <label htmlFor="notes">Notes:</label>
                         <textarea
                             value={notes}
@@ -235,7 +235,8 @@ const Form = ({onAddPuzzle}) => {
                             }
                             placeholder="Enter Notes about your Puzzle">
                         </textarea>
-                    </div>     
+                    </div>    
+                <div className="form-buttons">
                     <button className="buttons"
                         type="reset"
                         value="reset"
@@ -247,7 +248,7 @@ const Form = ({onAddPuzzle}) => {
                         type="submit" 
                         >Add
                     </button>
-
+                </div> 
                 </form>
             </fieldset>
 

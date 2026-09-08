@@ -78,12 +78,24 @@ body {
 }
 
 .form {
-  max-width: 500px;
+  max-width: 900px;
   margin: 2rem auto;
   padding: 2rem;
   background: rgb(194, 191, 191);
   border-radius: 8px;
   box-shadow:  0 4px 6px;
+}
+
+.form form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 350px;
 }
 
 .form-group label{
@@ -110,6 +122,10 @@ body {
 .form-group textarea:focus {
     border-color: #007bff;
     box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+}
+
+.full-width {
+    flex-basis: 100%;
 }
 
 .table {
