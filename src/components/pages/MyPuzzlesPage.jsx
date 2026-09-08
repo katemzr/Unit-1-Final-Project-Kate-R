@@ -52,6 +52,7 @@ const MyPuzzlesPage = () => {
             key={puzzle.id} 
             link={puzzle.link} 
             alt={puzzle.alt} 
+            image={puzzle.image}
             title={puzzle.title} 
             puzzlebrand={puzzle.puzzlebrand} 
             puzzleartist={puzzle.puzzleartist} 

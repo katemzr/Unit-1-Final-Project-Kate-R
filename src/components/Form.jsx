@@ -3,6 +3,7 @@ import { useState } from "react";
 
 const Form = ({onAddPuzzle}) => {
     const [id, setID] = useState(7);
+    const [image, setImage] = useState("");
     const [puzzleTitle,  setPuzzleTitle] = useState("");
     const [puzzleBrand, setPuzzleBrand] = useState("");
     const [puzzleArtist, setPuzzleArtist] = useState("");
@@ -18,6 +19,7 @@ const Form = ({onAddPuzzle}) => {
 
 
     const handleReset = () => {
+        setImage("");
         setPuzzleTitle("");
         setPuzzleBrand("");
         setPuzzleArtist("");
@@ -34,8 +36,10 @@ const Form = ({onAddPuzzle}) => {
 
     const handleAddCard = (e) => {
         e.preventDefault();
-        const newCard = {
+        alert("image: "+image);
+        const newCard = {   
             id: id,
+            image: image || "/public/images/Placeholder.jpg",
             title: puzzleTitle,
             puzzlebrand: puzzleBrand,
             puzzleartist: puzzleArtist,
@@ -61,7 +65,19 @@ const Form = ({onAddPuzzle}) => {
             <fieldset>
                 <form onSubmit={handleAddCard} action="#" method="GET">
                     <div className="form-group">
-                        
+                        <label htmlFor="image">Puzzle Image:</label>
+                        <input
+                            type="text" 
+                            name="image" 
+                            id="image" 
+                            value={image}
+                            onChange={ (e) =>
+                                setImage(e.target.value)
+                            }
+                            placeholder="Enter Image URL"
+                         />
+                    </div>
+                    <div className="form-group">                      
                         <label htmlFor="puzzletitle">Puzzle Title:</label>
                         <input 
                             type="text" 
