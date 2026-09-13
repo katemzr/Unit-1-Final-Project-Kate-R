@@ -44,20 +44,20 @@ const PuzzleCard = ({
             </div>
             <div>
                 <p>{id}</p>
-                <p>{puzzlebrand}</p>
-                <p>{puzzleartist}</p>
-                <p>{piececount}</p>
-                <p>{height}</p>
-                <p>{width}</p>
-                <p>{location}</p>
-                <p>{purchasedate}</p>
-                <p>{retailer}</p>
-                <p>{startdate}</p>
-                <p>{progresspercent}</p>
-                <p>{completiondate}</p>
-                <p>{completiontime}</p>
-                <p>{onloan}</p>
-                <p>{notes}</p>
+                <p>Brand:{puzzlebrand}</p>
+                <p>Artist:{puzzleartist}</p>
+                <p>Piece Count:{piececount}</p>
+                <p>Height:{height}</p>
+                <p>Width:{width}</p>
+                <p>Location:{location}</p>
+                <p>Purchase Date:{purchasedate}</p>
+                <p>Retailer:{retailer}</p>
+                <p>Start Date:{startdate}</p>
+                <p>Progress Percent:{progresspercent}</p>
+                <p>Completion Date:{completiondate}</p>
+                <p>Completion Time:{completiontime}</p>
+                <p>On Loan:{onloan ? "Yes" : "No"}</p>
+                <p>Notes:{notes}</p>
             </div>
             <div>
                 <DeletePuzzle onDelete={handleDelete} />

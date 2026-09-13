@@ -258,7 +258,7 @@ const Form = ({onAddPuzzle}) => {
                         />
                     </div>
                     <div className="form-group">
-                        <label htmlFor="onLoan">
+                        <label htmlFor="onLoan">On Loan:</label> 
                             <input
                                 type="checkbox"
                                 name="onLoan"
@@ -268,8 +268,7 @@ const Form = ({onAddPuzzle}) => {
                                     setOnLoan(e.target.checked)
                                 }
                                 placeholder="On Loan"
-                            />
-                        </label>    
+                            />   
                     </div>        
                     <div className="form-group full-width">
                         <label htmlFor="notes">Notes:</label>
