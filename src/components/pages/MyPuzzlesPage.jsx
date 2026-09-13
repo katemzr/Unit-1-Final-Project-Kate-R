@@ -2,6 +2,7 @@ import Form from "../Form";
 import PuzzleCard from "../PuzzleCard";
 import { useState } from "react";
 
+/*
 const initialPuzzles = [  //puzzles to appear on My Puzzles page to simulate a user's saved puzzle cards.
     {
         id: "1", 
@@ -42,6 +43,7 @@ const initialPuzzles = [  //puzzles to appear on My Puzzles page to simulate a u
 
 
 ];
+*/
 
 const MyPuzzlesPage = () => {
   
