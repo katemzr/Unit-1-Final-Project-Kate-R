@@ -47,7 +47,7 @@ const initialPuzzles = [  //puzzles to appear on My Puzzles page to simulate a u
 
 const MyPuzzlesPage = () => {
   
-    const [ puzzles, setPuzzles ] = useState(initialPuzzles);
+    const [ puzzles, setPuzzles ] = useState([]);
 
     const puzzleItems = puzzles.map(puzzle => 
         <PuzzleCard 
