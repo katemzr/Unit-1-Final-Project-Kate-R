@@ -13,10 +13,12 @@ const Form = ({onAddPuzzle}) => {
     const [purchaseDate, setPurchaseDate] = useState("");
     const [retailer, setRetailer] = useState("");
     const [startDate, setStartDate] = useState("");
+    const [progressPercent, setProgressPercent] = useState("");
     const [completionDate, setCompletionDate] = useState("");
+    const [completionTime, setCompletionTime] = useState("");
     const [notes, setNotes] = useState("");
     const [location, setLocation] = useState("");
-
+   
 
     const handleReset = () => {
         setImage("");
@@ -29,7 +31,9 @@ const Form = ({onAddPuzzle}) => {
         setPurchaseDate("");
         setRetailer("");
         setStartDate("");
+        setProgressPercent("");
         setCompletionDate("");
+        setCompletionTime("");
         setLocation("");
         setNotes("");
     };
@@ -49,8 +53,10 @@ const Form = ({onAddPuzzle}) => {
             purchasedate: purchaseDate,
             retailer: retailer,
             startdate: startDate,
+            progresspercent: progressPercent,
             completiondate: completionDate,
-            notes: notes
+            completiontime: completionTime,
+            notes: notes,
         };
 
        onAddPuzzle(newCard);
@@ -210,6 +216,18 @@ const Form = ({onAddPuzzle}) => {
                         />
                     </div>
                     <div className="form-group">
+                        <label htmlFor="progresspercent">Progress Percent:</label>
+                        <input 
+                            type="number" 
+                            name="progresspercent" 
+                            id="progresspercent" 
+                            value={progressPercent}
+                            onChange={ (e) =>
+                                setProgressPercent(e.target.value)
+                            }
+                            placeholder="Enter Progress Percent (0,25,50,75,100)"
+                        />
+                    <div className="form-group">
                         <label htmlFor="completiondate">Completion Date:</label>
                         <input 
                             type="date" 
@@ -222,6 +240,18 @@ const Form = ({onAddPuzzle}) => {
                             }                          
                         /> 
                     </div>
+                    <div className="form-group">
+                        <label htmlFor="completiontime">Completion Time:</label>
+                        <input 
+                            type="number" 
+                            name="completiontime" 
+                            id="completiontime" 
+                            value={completionTime}
+                            onChange={ (e) =>
+                                setCompletionTime(e.target.value)
+                            }
+                            placeholder="Enter Completion Time (mins)"
+                        />
                     <div className="form-group full-width">
                         <label htmlFor="notes">Notes:</label>
                         <textarea
