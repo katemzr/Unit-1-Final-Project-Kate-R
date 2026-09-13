@@ -174,7 +174,7 @@ const Form = ({onAddPuzzle}) => {
                             onChange={ (e) =>
                                 setLocation(e.target.value)
                             }
-                            placeholder="Enter Puzzle's Storage Location'"
+                            placeholder="Enter Puzzle's Storage Location"
                         />   
                     </div>
                     <div className="form-group">
@@ -225,7 +225,7 @@ const Form = ({onAddPuzzle}) => {
                             onChange={ (e) =>
                                 setProgressPercent(e.target.value)
                             }
-                            placeholder="Enter Progress Percent (0,25,50,75,100)"
+                            placeholder="Enter Progress Percent (e.g.0,50,100)"
                         />
                     </div>    
                     <div className="form-group">
