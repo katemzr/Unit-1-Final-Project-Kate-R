@@ -227,6 +227,7 @@ const Form = ({onAddPuzzle}) => {
                             }
                             placeholder="Enter Progress Percent (0,25,50,75,100)"
                         />
+                    </div>    
                     <div className="form-group">
                         <label htmlFor="completiondate">Completion Date:</label>
                         <input 
@@ -252,6 +253,7 @@ const Form = ({onAddPuzzle}) => {
                             }
                             placeholder="Enter Completion Time (mins)"
                         />
+                    </div>    
                     <div className="form-group full-width">
                         <label htmlFor="notes">Notes:</label>
                         <textarea
