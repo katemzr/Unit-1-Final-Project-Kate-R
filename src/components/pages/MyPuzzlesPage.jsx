@@ -63,7 +63,9 @@ const MyPuzzlesPage = () => {
             purchasedate={puzzle.purchasedate} 
             retailer={puzzle.retailer} 
             startdate={puzzle.startdate} 
+            progresspercent={puzzle.progresspercent}
             completiondate={puzzle.completiondate}
+            completiontime={puzzle.completiontime}
             notes={puzzle.notes} /> );
 
     const handleAddPuzzle = (newPuzzle) => {
