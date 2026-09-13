@@ -18,7 +18,8 @@ const Form = ({onAddPuzzle}) => {
     const [completionTime, setCompletionTime] = useState("");
     const [notes, setNotes] = useState("");
     const [location, setLocation] = useState("");
-   
+    const [onLoan, setOnLoan] = useState(false);
+    
 
     const handleReset = () => {
         setImage("");
@@ -35,6 +36,7 @@ const Form = ({onAddPuzzle}) => {
         setCompletionDate("");
         setCompletionTime("");
         setLocation("");
+        setOnLoan(false);
         setNotes("");
     };
 
@@ -56,6 +58,7 @@ const Form = ({onAddPuzzle}) => {
             progresspercent: progressPercent,
             completiondate: completionDate,
             completiontime: completionTime,
+            onloan: onLoan,
             notes: notes,
         };
 
@@ -253,7 +256,21 @@ const Form = ({onAddPuzzle}) => {
                             }
                             placeholder="Enter Completion Time (mins)"
                         />
-                    </div>    
+                    </div>
+                    <div className="form-group">
+                        <label htmlFor="onLoan">
+                            <input
+                                type="checkbox"
+                                name="onLoan"
+                                id="onLoan"
+                                checked={onLoan}
+                                onChange={(e) => 
+                                    setOnLoan(e.target.checked)
+                                }
+                                placeholder="On Loan"
+                            />
+                        </label>    
+                    </div>        
                     <div className="form-group full-width">
                         <label htmlFor="notes">Notes:</label>
                         <textarea

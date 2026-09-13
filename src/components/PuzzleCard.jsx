@@ -1,7 +1,26 @@
 import { useState } from "react";
 import DeletePuzzle from "./DeletePuzzle";
 
-const PuzzleCard = ({ id, image, title, link, alt, puzzlebrand, puzzleartist, piececount, height, width, location, purchasedate, retailer, startdate, progresspercent, completiondate, completiontime, notes
+const PuzzleCard = ({ 
+    id, 
+    image, 
+    title, 
+    link, 
+    alt, 
+    puzzlebrand, 
+    puzzleartist, 
+    piececount, 
+    height, 
+    width, 
+    location, 
+    purchasedate, 
+    retailer, 
+    startdate, 
+    progresspercent, 
+    completiondate, 
+    completiontime,
+    onloan, 
+    notes
  }) => {
     
     const [ isVisible, setIsVisible ] = useState(true);
@@ -37,6 +56,7 @@ const PuzzleCard = ({ id, image, title, link, alt, puzzlebrand, puzzleartist, pi
                 <p>{progresspercent}</p>
                 <p>{completiondate}</p>
                 <p>{completiontime}</p>
+                <p>{onloan}</p>
                 <p>{notes}</p>
             </div>
             <div>

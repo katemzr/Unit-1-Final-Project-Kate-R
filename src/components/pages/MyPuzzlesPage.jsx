@@ -66,6 +66,7 @@ const MyPuzzlesPage = () => {
             progresspercent={puzzle.progresspercent}
             completiondate={puzzle.completiondate}
             completiontime={puzzle.completiontime}
+            onloan={puzzle.onloan}
             notes={puzzle.notes} /> );
 
     const handleAddPuzzle = (newPuzzle) => {
