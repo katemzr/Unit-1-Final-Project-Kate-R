@@ -1,4 +1,3 @@
-import { useState } from "react";
 import DeletePuzzle from "./DeletePuzzle";
 
 const PuzzleCard = ({ 
@@ -23,7 +22,7 @@ const PuzzleCard = ({
     onDeletePuzzle
  }) => {
     
-    const [ isVisible, setIsVisible ] = useState(true);
+    /*const [ isVisible, setIsVisible ] = useState(true);
     
     const handleDelete = () => {
         setIsVisible(false);
@@ -32,7 +31,7 @@ const PuzzleCard = ({
     if (!isVisible){ 
         return null;
     }
-    
+   */ 
     return (
         <div className="card">
             <div>
@@ -59,7 +58,7 @@ const PuzzleCard = ({
                 <p>Notes:{notes}</p>
             </div>
             <div>
-                <DeletePuzzle onDelete={handleDelete} />
+                <DeletePuzzle onDelete={() => onDeletePuzzle(id)} />
             </div>
         </div>
     );
