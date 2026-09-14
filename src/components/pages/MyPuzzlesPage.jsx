@@ -54,7 +54,7 @@ const MyPuzzlesPage = () => {
 
         const fetchPuzzles = async () => {
             try {
-                const response = await apiClient.get("/puzzles"); //get saved puzzles from the database
+                const response = await apiClient.get("/puzzles"); //GET saved puzzles from the database
 
                 setPuzzles(response.data); 
 
@@ -90,9 +90,15 @@ const MyPuzzlesPage = () => {
             onloan={puzzle.onloan}
             notes={puzzle.notes} /> );
 
-    const handleAddPuzzle = (newPuzzle) => {
+    const handleAddPuzzle = async (newPuzzle) => {
+        try {
+            const response = await apiClient.post("/puzzles",newPuzzle); //POST new puzzles to the database
         
-        setPuzzles((prevPuzzles) => [...prevPuzzles, newPuzzle]);
+        setPuzzles((prevPuzzles) => [...prevPuzzles, response.data]);
+
+        } catch (error) {
+            console.error("Error adding puzzle:", error)
+        }
     };
 
     return (
