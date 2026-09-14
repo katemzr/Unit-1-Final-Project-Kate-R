@@ -67,6 +67,18 @@ const MyPuzzlesPage = () => {
 
     }, []);
 
+    
+    const handleDeletePuzzle = async (id) => {
+        try {
+            await apiClient.delete(`/puzzles/${id}`); //DELETE puzzle from database
+
+            setPuzzles((prevPuzzles) => prevPuzzles.filter((puzzle) => puzzle.id !== id));
+
+        } catch (error) {
+            console.error("Error deleting puzzle:", error);
+        }
+    };
+
 /*
     const puzzleItems = puzzles.map(puzzle => 
         <PuzzleCard 
@@ -125,16 +137,6 @@ const puzzleItems = puzzles.map(puzzle =>
         }
     };
 
-    const handleDeletePuzzle = async (id) => {
-        try {
-            await apiClient.delete(`/puzzles/${id}`); //DELETE puzzle from database
-
-            setPuzzles((prevPuzzles) => prevPuzzlesfilter((puzzle) => puzzle.id !== id));
-
-        } catch (error) {
-            console.error("Error deleting puzzle:", error);
-        }
-    };
 
     return (
         <main >
