@@ -2,7 +2,6 @@ import { useState } from "react";
 
 
 const Form = ({onAddPuzzle}) => {
-    const [id, setID] = useState(7);
     const [image, setImage] = useState("");
     const [puzzleTitle,  setPuzzleTitle] = useState("");
     const [puzzleBrand, setPuzzleBrand] = useState("");
@@ -43,7 +42,6 @@ const Form = ({onAddPuzzle}) => {
     const handleAddCard = (e) => {
         e.preventDefault();
         const newCard = {   
-            id: id,
             image: image || "/images/Placeholder.jpg",
             title: puzzleTitle,
             brand: puzzleBrand,
@@ -64,7 +62,6 @@ const Form = ({onAddPuzzle}) => {
 
        onAddPuzzle(newCard);
        handleReset(); 
-       setID(prev => prev +1);
     };
 
     return (
