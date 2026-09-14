@@ -2,8 +2,7 @@ import { useState } from "react";
 
 
 const Form = ({onAddPuzzle}) => {
-    const [id, setID] = useState(7);
-    const [image, setImage] = useState("");
+    const [imageURL, setImageURL] = useState("");
     const [puzzleTitle,  setPuzzleTitle] = useState("");
     const [puzzleBrand, setPuzzleBrand] = useState("");
     const [puzzleArtist, setPuzzleArtist] = useState("");
@@ -13,13 +12,16 @@ const Form = ({onAddPuzzle}) => {
     const [purchaseDate, setPurchaseDate] = useState("");
     const [retailer, setRetailer] = useState("");
     const [startDate, setStartDate] = useState("");
+    const [progressPercent, setProgressPercent] = useState("");
     const [completionDate, setCompletionDate] = useState("");
+    const [completionTime, setCompletionTime] = useState("");
     const [notes, setNotes] = useState("");
     const [location, setLocation] = useState("");
-
+    const [onLoan, setOnLoan] = useState(false);
+    
 
     const handleReset = () => {
-        setImage("");
+        setImageURL("");
         setPuzzleTitle("");
         setPuzzleBrand("");
         setPuzzleArtist("");
@@ -29,49 +31,53 @@ const Form = ({onAddPuzzle}) => {
         setPurchaseDate("");
         setRetailer("");
         setStartDate("");
+        setProgressPercent("");
         setCompletionDate("");
+        setCompletionTime("");
         setLocation("");
+        setOnLoan(false);
         setNotes("");
     };
 
     const handleAddCard = (e) => {
         e.preventDefault();
         const newCard = {   
-            id: id,
-            image: image || "/images/Placeholder.jpg",
+            imageURL: imageURL || "/images/Placeholder.jpg",
             title: puzzleTitle,
-            puzzlebrand: puzzleBrand,
-            puzzleartist: puzzleArtist,
-            piececount: pieceCount,
-            height: height,
-            width: width,
+            brand: puzzleBrand,
+            artist: puzzleArtist,
+            pieceCount: Number(pieceCount),
+            height: Number(height),
+            width: Number(width),
             location: location,
-            purchasedate: purchaseDate,
+            purchaseDate: purchaseDate,
             retailer: retailer,
-            startdate: startDate,
-            completiondate: completionDate,
-            notes: notes
+            startDate: startDate,
+            progressPercent: Number(progressPercent),
+            completionDate: completionDate,
+            completionTime: Number(completionTime),
+            onLoan: onLoan,
+            notes: notes,
         };
 
        onAddPuzzle(newCard);
        handleReset(); 
-       setID(prev => prev +1);
     };
 
     return (
         <div className="form">
             <h1>Add a New Puzzle</h1>
             <fieldset>
-                <form onSubmit={handleAddCard} action="#" method="GET">
+                <form onSubmit={handleAddCard}>
                     <div className="form-group full-width">
-                        <label htmlFor="image">Puzzle Image:</label>
+                        <label htmlFor="imageURL">Puzzle Image:</label>
                         <input
                             type="text" 
-                            name="image" 
-                            id="image" 
-                            value={image}
+                            name="imageURL" 
+                            id="imageURL" 
+                            value={imageURL}
                             onChange={ (e) =>
-                                setImage(e.target.value)
+                                setImageURL(e.target.value)
                             }
                             placeholder="Enter Image URL"
                          />
@@ -168,7 +174,7 @@ const Form = ({onAddPuzzle}) => {
                             onChange={ (e) =>
                                 setLocation(e.target.value)
                             }
-                            placeholder="Enter Puzzle's Storage Location'"
+                            placeholder="Enter Puzzle's Storage Location"
                         />   
                     </div>
                     <div className="form-group">
@@ -210,6 +216,19 @@ const Form = ({onAddPuzzle}) => {
                         />
                     </div>
                     <div className="form-group">
+                        <label htmlFor="progresspercent">Progress Percent:</label>
+                        <input 
+                            type="number" 
+                            name="progresspercent" 
+                            id="progresspercent" 
+                            value={progressPercent}
+                            onChange={ (e) =>
+                                setProgressPercent(e.target.value)
+                            }
+                            placeholder="Enter Progress Percent (e.g.0,50,100)"
+                        />
+                    </div>    
+                    <div className="form-group">
                         <label htmlFor="completiondate">Completion Date:</label>
                         <input 
                             type="date" 
@@ -222,6 +241,32 @@ const Form = ({onAddPuzzle}) => {
                             }                          
                         /> 
                     </div>
+                    <div className="form-group">
+                        <label htmlFor="completiontime">Completion Time:</label>
+                        <input 
+                            type="number" 
+                            name="completiontime" 
+                            id="completiontime" 
+                            value={completionTime}
+                            onChange={ (e) =>
+                                setCompletionTime(e.target.value)
+                            }
+                            placeholder="Enter Completion Time (mins)"
+                        />
+                    </div>
+                    <div className="form-group">
+                        <label htmlFor="onLoan">On Loan:</label> 
+                            <input
+                                type="checkbox"
+                                name="onLoan"
+                                id="onLoan"
+                                checked={onLoan}
+                                onChange={(e) => 
+                                    setOnLoan(e.target.checked)
+                                }
+                                placeholder="On Loan"
+                            />   
+                    </div>        
                     <div className="form-group full-width">
                         <label htmlFor="notes">Notes:</label>
                         <textarea
