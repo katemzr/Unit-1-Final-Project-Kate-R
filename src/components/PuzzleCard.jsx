@@ -19,7 +19,8 @@ const PuzzleCard = ({
     completionDate, 
     completionTime,
     onLoan, 
-    notes
+    notes,
+    onDeletePuzzle
  }) => {
     
     const [ isVisible, setIsVisible ] = useState(true);
