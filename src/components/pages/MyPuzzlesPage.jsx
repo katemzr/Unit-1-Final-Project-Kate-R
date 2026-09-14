@@ -119,10 +119,21 @@ const puzzleItems = puzzles.map(puzzle =>
         try {
             const response = await apiClient.post("/puzzles",newPuzzle); //POST new puzzles to the database
         
-        setPuzzles((prevPuzzles) => [...prevPuzzles, response.data]);
+            setPuzzles((prevPuzzles) => [...prevPuzzles, response.data]);
 
         } catch (error) {
             console.error("Error adding puzzle:", error)
+        }
+    };
+
+    const handleDeletePuzzle = async (id) => {
+        try {
+            await apiClient.delete(`/puzzles/${id}`); //DELETE puzzle from database
+
+            setPuzzles((prevPuzzles) => prevPuzzlesfilter((puzzle) => puzzle.id !== id));
+
+        } catch (error) {
+            console.error("Error deleting puzzle:", error);
         }
     };
 
