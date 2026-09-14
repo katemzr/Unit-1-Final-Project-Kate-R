@@ -1,6 +1,7 @@
 import Form from "../Form";
 import PuzzleCard from "../PuzzleCard";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import apiClient from "../../config/api-client";
 
 /*
 const initialPuzzles = [  //puzzles to appear on My Puzzles page to simulate a user's saved puzzle cards.
