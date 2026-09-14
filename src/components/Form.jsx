@@ -68,7 +68,7 @@ const Form = ({onAddPuzzle}) => {
         <div className="form">
             <h1>Add a New Puzzle</h1>
             <fieldset>
-                <form onSubmit={handleAddCard} action="#" method="GET">
+                <form onSubmit={handleAddCard}>
                     <div className="form-group full-width">
                         <label htmlFor="image">Puzzle Image:</label>
                         <input
