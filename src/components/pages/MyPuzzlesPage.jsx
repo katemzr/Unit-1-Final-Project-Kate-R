@@ -67,7 +67,7 @@ const MyPuzzlesPage = () => {
 
     }, []);
 
-
+/*
     const puzzleItems = puzzles.map(puzzle => 
         <PuzzleCard 
             key={puzzle.id} 
@@ -89,6 +89,31 @@ const MyPuzzlesPage = () => {
             completiontime={puzzle.completiontime}
             onloan={puzzle.onloan}
             notes={puzzle.notes} /> );
+*/
+
+const puzzleItems = puzzles.map(puzzle => 
+        <PuzzleCard 
+            key={puzzle.id}
+            id={puzzle.id} 
+            //link={puzzle.link} 
+            //alt={puzzle.alt} 
+            imageURL={puzzle.imageURL}
+            title={puzzle.title} 
+            brand={puzzle.brand} 
+            artist={puzzle.artist} 
+            pieceCount={puzzle.pieceCount} 
+            height={puzzle.height}
+            width={puzzle.width}
+            location={puzzle.location} 
+            purchaseDate={puzzle.purchaseDate} 
+            retailer={puzzle.retailer} 
+            startDate={puzzle.startDate} 
+            progressPercent={puzzle.progressPercent}
+            completionDate={puzzle.completionDate}
+            completionTime={puzzle.completionTime}
+            onLoan={puzzle.onLoan}
+            notes={puzzle.notes} /> );
+
 
     const handleAddPuzzle = async (newPuzzle) => {
         try {

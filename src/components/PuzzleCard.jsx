@@ -3,23 +3,22 @@ import DeletePuzzle from "./DeletePuzzle";
 
 const PuzzleCard = ({ 
     id, 
-    image, 
+    imageURL, 
     title, 
-    link, 
     alt, 
-    puzzlebrand, 
-    puzzleartist, 
-    piececount, 
+    brand, 
+    artist, 
+    pieceCount, 
     height, 
     width, 
     location, 
-    purchasedate, 
+    purchaseDate, 
     retailer, 
-    startdate, 
-    progresspercent, 
-    completiondate, 
-    completiontime,
-    onloan, 
+    startDate, 
+    progressPercent, 
+    completionDate, 
+    completionTime,
+    onLoan, 
     notes
  }) => {
     
@@ -36,27 +35,26 @@ const PuzzleCard = ({
     return (
         <div className="card">
             <div>
-                <img src={link} alt={alt} width={200} height={300}/>
-                <img src={image} alt={alt} width={200} height={300}/>
+                <img src={imageURL} alt={alt} width={200} height={300}/>
             </div>
             <div>
                 <p><b>{title}</b></p>
             </div>
             <div>
                 <p>{id}</p>
-                <p>Brand:{puzzlebrand}</p>
-                <p>Artist:{puzzleartist}</p>
-                <p>Piece Count:{piececount}</p>
+                <p>Brand:{brand}</p>
+                <p>Artist:{artist}</p>
+                <p>Piece Count:{pieceCount}</p>
                 <p>Height:{height}</p>
                 <p>Width:{width}</p>
                 <p>Location:{location}</p>
-                <p>Purchase Date:{purchasedate}</p>
+                <p>Purchase Date:{purchaseDate}</p>
                 <p>Retailer:{retailer}</p>
-                <p>Start Date:{startdate}</p>
-                <p>Progress Percent:{progresspercent}</p>
-                <p>Completion Date:{completiondate}</p>
-                <p>Completion Time:{completiontime}</p>
-                <p>On Loan:{onloan ? "Yes" : "No"}</p>
+                <p>Start Date:{startDate}</p>
+                <p>Progress Percent:{progressPercent}</p>
+                <p>Completion Date:{completionDate}</p>
+                <p>Completion Time:{completionTime}</p>
+                <p>On Loan:{onLoan ? "Yes" : "No"}</p>
                 <p>Notes:{notes}</p>
             </div>
             <div>
