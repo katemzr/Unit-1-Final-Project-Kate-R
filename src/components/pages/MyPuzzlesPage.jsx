@@ -50,6 +50,24 @@ const MyPuzzlesPage = () => {
   
     const [ puzzles, setPuzzles ] = useState([]);
 
+    useEffect(() => {
+
+        const fetchPuzzles = async () => {
+            try {
+                const response = await apiClient.get("/puzzles"); //get saved puzzles from the database
+
+                setPuzzles(response.data); 
+
+            } catch (error) {
+                console.error("Error fetching puzzles:", error);
+            }
+        };
+
+        fetchPuzzles();
+
+    }, []);
+
+
     const puzzleItems = puzzles.map(puzzle => 
         <PuzzleCard 
             key={puzzle.id} 
