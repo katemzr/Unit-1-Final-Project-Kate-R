@@ -95,8 +95,6 @@ const puzzleItems = puzzles.map(puzzle =>
         <PuzzleCard 
             key={puzzle.id}
             id={puzzle.id} 
-            //link={puzzle.link} 
-            //alt={puzzle.alt} 
             imageURL={puzzle.imageURL}
             title={puzzle.title} 
             brand={puzzle.brand} 
@@ -112,7 +110,8 @@ const puzzleItems = puzzles.map(puzzle =>
             completionDate={puzzle.completionDate}
             completionTime={puzzle.completionTime}
             onLoan={puzzle.onLoan}
-            notes={puzzle.notes} /> );
+            notes={puzzle.notes} 
+            onDeletePuzzle={handleDeletePuzzle}/> );
 
 
     const handleAddPuzzle = async (newPuzzle) => {
